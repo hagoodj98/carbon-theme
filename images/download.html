@@ -1,0 +1,3779 @@
+
+
+
+
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if IE 10 ]>    <html lang="en" class="no-js ie10"> <![endif]-->
+<!--[if IE 11 ]>    <html lang="en" class="no-js ie11"> <![endif]-->
+<!--[if IE]><!--> <html style="height: 100%;" lang="en" prefix="og: http://ogp.me/ns#" class="no-js"
+  itemscope itemtype="https://schema.org/Article"
+> <!--<![endif]-->
+<head profile="http://a9.com/-/spec/opensearch/1.1/">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"c996bd7258",applicationID:"156119156"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"c996bd7258","agent":"","transactionName":"NgFXMBNTWUJXUEMLDQ9LcxEPUUNYWV0YEAcHAUcBD1FSH0BaUhURWwVHEAhRW1RpV1IWAwgI","applicationID":"156119156","errorBeacon":"bam.nr-data.net","applicationTime":2601}</script>
+    
+    
+    <meta name="copyright" content="(c) National Geographic Society" />
+    <meta name="author" content="National Geographic Society" />
+    <link rel="canonical" href="http://www.nationalgeographic.org/article/greenhouse-effect/" />
+    
+    
+    
+
+    <meta itemprop="keywords" name="keywords" content="atmosphere, climate, emissions, global warming, Greenhouse Effect, greenhouse gases, temperature" />
+    
+        <meta itemprop="description" name="description" content="The greenhouse effect happens when certain gases, which are known as greenhouse gases, accumulate in Earth&amp;rsquo;s atmosphere. Greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), ozone (O3), and fluorinated gases." />
+    
+    
+        <meta property="og:title" content="Greenhouse Effect" />
+    
+    
+        <meta property="og:description" content="The greenhouse effect happens when certain gases, which are known as greenhouse gases, accumulate in Earth&amp;rsquo;s atmosphere. Greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), ozone (O3), and fluorinated gases." />
+    
+    <meta property="og:url" content="http://www.nationalgeographic.org/article/greenhouse-effect/" />
+    <meta property="og:type" content="article" />
+    
+        
+            <meta property="og:image" content="https://media.nationalgeographic.org/assets/photos/315/523/ed5faa62-24bc-48d8-963c-f2aaf00a004e.jpg">
+        
+    
+    <meta property="article:author" content="National Geographic Society" />
+    
+        <meta property="article:published_time" content="2018-05-18" />
+    
+    
+        <meta property="article:modified_time" content="2012-10-09T13:32:35.298831+00:00" />
+    
+    
+        <meta property="article:tag" content="atmosphere" />
+    
+        <meta property="article:tag" content="climate" />
+    
+        <meta property="article:tag" content="emissions" />
+    
+        <meta property="article:tag" content="global warming" />
+    
+        <meta property="article:tag" content="Greenhouse Effect" />
+    
+        <meta property="article:tag" content="greenhouse gases" />
+    
+        <meta property="article:tag" content="temperature" />
+    
+    <meta property="og:site_name" content="National Geographic Society" />
+    
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@NatGeoEducation" />
+        <meta name="twitter:title" content="Greenhouse Effect" />
+        <meta name="twitter:description" content="The greenhouse effect happens when certain gases, which are known as greenhouse gases, accumulate in Earth&amp;rsquo;s atmosphere. Greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), ozone (O3), and fluorinated gases." />
+        <meta name="twitter:url" content="http://www.nationalgeographic.org/article/greenhouse-effect/" />
+    
+    <link rel="canonical" href="http://www.nationalgeographic.org/article/greenhouse-effect/" />
+
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicons/apple-icon-57x57.72dee8f378a9.png"><link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicons/apple-icon-60x60.e27870d5f303.png"><link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicons/apple-icon-72x72.d7ba7ad8147a.png"><link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicons/apple-icon-76x76.c69536afd1ce.png"><link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicons/apple-icon-114x114.2ce7a7a4559d.png"><link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicons/apple-icon-120x120.f6d522e238ad.png"><link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicons/apple-icon-144x144.cd4fce289bea.png"><link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicons/apple-icon-152x152.440550e1d446.png"><link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicons/apple-icon-180x180.bef082a316ad.png"><link rel="icon" type="image/png" sizes="192x192"  href="/static/images/favicons/android-icon-192x192.07210fe3c128.png"><link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.7e1497cd2e06.png"><link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicons/favicon-96x96.88cbfa475fd7.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.05bd631c63a4.png"><link rel="manifest" href="/static/images/favicons/manifest.b58fcfa7628c.json"><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/static/images/favicons/ms-icon-144x144.cd4fce289bea.png"><meta name="theme-color" content="#ffffff">
+
+    <meta property="fb:pages" content="357936683619">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    
+        
+    
+    
+    Greenhouse Effect
+ | National Geographic Society</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="http://www.nationalgeographic.org/opensearch.xml" title="National Geographic search" />
+
+    
+    
+    
+    
+        <link rel="stylesheet" href="/static/CACHE/css/output.3ace77a7fe66.css" type="text/css" />
+        
+        
+
+    
+    <link rel="stylesheet" type="text/css" href="/static/ngkit/css/ngkit.min.6881d579cd4c.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,600,600i">
+    
+
+
+  
+    <link rel="stylesheet" href="/static/ngs_commons/css/donate_updates_modals.c12314e77e25.css"/>
+  
+
+
+
+
+    
+      <link rel="stylesheet" type="text/css" href="/static/resource-carousel/index.430ddb8cffce.css">
+    
+    <link rel="stylesheet" href="/static/ngs/bookmark/css/bookmarks_styling.755095617262.css">
+
+
+    
+    <link href="https://plus.google.com/116983520436200180841" rel="publisher">
+    
+
+
+    
+        <script type="text/javascript" src="/static/CACHE/js/output.3a8a1b60db93.js"></script>
+    
+    
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation/header_nav.01c4b9d402b1.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation/footer_nav.c33a3c35f67a.css" />
+
+
+  <style>
+    .ng-related-resources-container-desktop.collapsed .related-resource-card {
+      display: none;
+    }
+
+    .ng-related-resources-container-desktop.collapsed .related-resource-card:nth-child(-n+6) {
+      display: flex;
+      z-index: 99;
+    }
+
+    .related-resource-card .card-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 2rem; /* fallback */
+      max-height: 4rem; /* fallback */
+      min-height: 4rem; /* fallback */
+      -webkit-line-clamp: 2; /* number of lines to show */
+      -webkit-box-orient: vertical;
+      width: 85%;
+    }
+
+    .related-resource-card .card-description {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      line-height: 1.7rem; /* fallback */
+      max-height: 6.8rem; /* fallback */
+      min-height: 6.8rem; /* fallback */
+      -webkit-line-clamp: 4; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+
+    .ng-related-resources-container-desktop ul {
+      list-style: none;
+    }
+
+    .ng-related-resources-container-mobile {
+      overflow: hidden;
+      width: 100vw;
+      left: -25px;
+      position: relative;
+    }
+
+    .ng-related-resources-container-mobile li.related-resource-card {
+      z-index: 99;
+    }
+
+    .ng-related-resources-container-mobile ul.ng-slider {
+      margin-left: -70px;
+      z-index: 99;
+      min-height: 550px !important;
+    }
+    .education-resource-search-container {
+      background: rgba(255,255,255,0);
+    }
+    .card-content {
+      position: relative;
+    }
+  </style>
+
+
+  <link rel="stylesheet" href="/static/ngs/asset-library/css/search-module.4495fd8c1e5a.css">
+  <style>
+    #search-module-01 {
+      min-height: 10vh;
+      min-height: 30vh;
+      display: flex;
+      align-items: center;
+    }
+    .ng-select-hierarchical li.ng-c-list-back-btn label.ng-c-cursor-pointer {
+      padding-left: 0; /* temporary hotfix, until ngs-react >0.5.34 is deployed */
+    }
+  </style>
+
+
+</head>
+
+<body class="TE_theme">
+
+
+
+
+    <!-- Google Tag Manager -->
+    
+
+
+  <script>window._cookieMgmtNS = JSON.parse('{\u0022cookieBannerHost\u0022: \u0022//www.nationalgeographic.org\u0022, \u0022geoIPUrl\u0022: \u0022//www.nationalgeographic.org/ngs\u002Dcommons/api/geoip\u0022}');</script>
+
+
+<script type="text/javascript" src="/static/ngs_commons/js/cookie_management.ba2a0f77b208.js"></script>
+
+    <script>
+        var dataLayer = [{'pageCategory': 'NG|ORG'}];
+    </script>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GDQ9F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+          var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5GDQ9F');
+    </script>
+<!-- End Google Tag Manager -->
+
+
+
+<!--[if lt IE 10 ]>
+<style>
+.buorg {
+    z-index: 111111;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #A29330;
+    background: #FDF2AB no-repeat 13px center url(//browser-update.org/img/small/i.gif);
+    text-align: left;
+    cursor: pointer;
+    font-family: "GeographEditWeb", Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 12px;
+}
+.buorg div {
+padding: 5px 36px 5px 40px;
+}
+</style>
+<div id="buorg" class="buorg">
+    <div>Your browser is <b>out of date</b>. It has known <b>security flaws</b> and may <b>not display all features</b> of this and other websites. <a href="http://browser-update.org/update-browser.html">Learn how to update your browser</a></div>
+</div>
+<![endif]-->
+
+
+
+    <div class="grey-nav">
+        
+
+
+<a href="#start-of-content" tabindex="1" id="skip-to-content">Skip to content</a>
+
+
+<div class="ng-header-nav-container condensed ">
+    
+
+
+<nav id="header-nav-container" aria-label="Main Navigation" class="top">
+
+    <div class="navbar-always">
+
+        <a href="/" role="home" id="header-logo-container">
+            <img alt="National Geographic logo" src="/static/images/logos/nglogo-stacked-black.min.87da50cdd596.svg" class="black-logo" />
+            <img alt="National Geographic logo" src="/static/images/logos/nglogo-stacked-white.min.6f3b65fe2af6.svg" class="white-logo" />
+        </a>
+
+        <ul id="header-nav-icons">
+            <li class="cart-timer ng-text-center">
+                <a href="#" id="tessitura-cart-button" class="ng-hidden" title="Shopping Cart"><i class="ng-icon ng-color-dkgray"><svg id="cart-filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M7.29255714,5.8 L28,5.8 L25.31,16.26 C25.0151361,17.2908939 24.072234,18.0011319 23,18.0000014 L10.46,18.0000014 C9.33600025,17.9985997 8.3635326,17.2173009 8.12,16.12 L6.01652049,6.92173365 L4.68,1.49999752 L0,1.49999752 L0,-2.48488866e-06 L5.27,-2.48488866e-06 C5.61559746,-0.000884606417 5.91705747,0.23450198 6,0.57 L7.29255714,5.8 Z M10.75,21.64 C12.4068542,21.64 13.75,22.9831458 13.75,24.64 C13.75,26.2968542 12.4068542,27.64 10.75,27.64 C9.09314575,27.64 7.75,26.2968542 7.75,24.64 C7.75,22.9831458 9.09314575,21.64 10.75,21.64 Z M22.69,21.64 C24.3468542,21.64 25.69,22.9831458 25.69,24.64 C25.69,25.8533867 24.9590735,26.9472956 23.8380503,27.4116386 C22.7170271,27.8759816 21.4266736,27.6193143 20.5686797,26.7613203 C19.7106857,25.9033264 19.4540184,24.6129729 19.9183614,23.4919497 C20.3827044,22.3709265 21.4766133,21.64 22.69,21.64 Z"></path>
+</svg></i></a>
+                <input type="hidden" id="tessitura-cart-ttl" value="0" />
+                <div role="timer" id="tessitura-cart-ttl-display" class="ng-color-dkgray ng-text-center ng-text-bold ng-text-small icon-subtext" aria-label="cart expiration timer"></div>
+                <div class="sr-only" id="cart-timer-message" aria-live="assertive"></div>
+            </li>
+            <li class="donate-button">
+                <a href="https://give.nationalgeographic.org/page/49060/donate/1" target="_blank" class="ng-button ng-button-mini ng-button-primary">Donate</a>
+            </li>
+            <li class="user-icon-link">
+                <a href="https://account.nationalgeographic.org/" role="button">
+                    
+                    <i class="ng-icon">
+                        <img alt="account icon" src="/static/svg/user.8f38a17c7c81.svg" class="account-icon-black" />
+                        <img src="/static/svg/user-white.55437cd30633.svg" class="account-icon-white" />
+                    </i>
+                    <div class="icon-subtext">Account</div>
+                </a>
+            </li>
+            <li class="menu-icon-link">
+                <a href="javascript:void(0);" role="button">
+                    <i class="ng-icon ng-icon-menu"></i>
+                    <div class="icon-subtext">Menu</div>
+                </a>
+            </li>
+            <li class="close-icon-link">
+                <a href="javascript:void(0);" role="button">
+                    <i class="ng-icon ng-icon-close"></i>
+                    <div class="icon-subtext">Close</div>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="navbar-menu">
+
+        <ul class="navbar-account-mobile level1-list">
+            <li class="account-node">
+                <a href="https://account.nationalgeographic.org/">
+                    <img src="/static/svg/user-white.55437cd30633.svg"/>
+                    <span>Account</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="level1-list" role="menu">
+
+            
+            <div id="overflow-cover">
+
+            
+
+            
+            <li class="level1-node has-children">
+                <a href="/projects/" role="menuitem" class="header-nav-link">Impact</a>
+
+                
+                <ul class="level2-list" role="menu">
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+                </ul>
+                
+
+            </li>
+            
+
+            
+
+            
+            <li class="level1-node has-children">
+                <a href="/education/" role="menuitem" class="header-nav-link">Education</a>
+
+                
+                <ul class="level2-list" role="menu">
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/education/classroom-resources/" class="header-nav-link">Classroom Resources</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/resource-library/" role="menuitem" class="header-nav-link">Resource Library</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/classroom-resources/mapping/" role="menuitem" class="header-nav-link">Mapping</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/classroom-resources/explorer-magazine/" role="menuitem" class="header-nav-link">Explorer Magazine</a>
+                                    </li>
+                                    
+                                
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/education/professional-development/" class="header-nav-link">Professional Development</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/professional-development/courses/" role="menuitem" class="header-nav-link">Online Courses</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/professional-development/network/" role="menuitem" class="header-nav-link">Educator Network</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/professional-development/grants/" role="menuitem" class="header-nav-link">Grants for Educators</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/professional-development/grosvenor-teacher-fellows/" role="menuitem" class="header-nav-link">Grosvenor Teacher Fellowships</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/education/student-experiences/" class="header-nav-link">Student Experiences</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/student-experiences/geochampionships/" role="menuitem" class="header-nav-link">2019 Geo Championships</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/student-experiences/geobee/" role="menuitem" class="header-nav-link">GeoBee</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/student-experiences/geochallenge/" role="menuitem" class="header-nav-link">GeoChallenge</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/student-experiences/explorer-classroom/" role="menuitem" class="header-nav-link">Explorer Classroom</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/education/student-experiences/student-matinees/" role="menuitem" class="header-nav-link">Student Matinees</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node">
+                            <a href="https://blog.education.nationalgeographic.org/" class="header-nav-link">Blog</a>
+
+                            
+
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+
+                    
+                </ul>
+                
+
+            </li>
+            
+
+            
+
+            
+            <li class="level1-node has-children">
+                <a href="/events/" role="menuitem" class="header-nav-link">Events</a>
+
+                
+                <ul class="level2-list" role="menu">
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/events/visit/" class="header-nav-link">Visit the Museum</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/events/visit/eventsbenefits/" role="menuitem" class="header-nav-link">Contributing Membership</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/events/visit/group-sales/" role="menuitem" class="header-nav-link">Group Sales</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/events/visit/store/" role="menuitem" class="header-nav-link">Museum Store</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/events/browse/" class="header-nav-link">Browse All Events</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/events/watch/" role="menuitem" class="header-nav-link">Watch Past Events</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node">
+                            <a href="/events/traveling-exhibitions/" class="header-nav-link">Host an Exhibition</a>
+
+                            
+
+                            
+
+                        </li>
+                        
+
+                    
+                </ul>
+                
+
+            </li>
+            
+
+            
+
+            
+            <li class="level1-node has-children">
+                <a href="/funding-opportunities/" role="menuitem" class="header-nav-link">Funding Opportunities</a>
+
+                
+                <ul class="level2-list" role="menu">
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/funding-opportunities/grants/" class="header-nav-link">Grants Program</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/funding-opportunities/grants/what-we-fund/" role="menuitem" class="header-nav-link">What We Fund</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/funding-opportunities/grants/where-we-work/" role="menuitem" class="header-nav-link">Where We Work</a>
+                                    </li>
+                                    
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/funding-opportunities/grants/how-to-apply/" role="menuitem" class="header-nav-link">How to Apply</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+                        <li class="level2-node dropdown">
+                            <a href="/funding-opportunities/innovation-challenges/" class="header-nav-link">Innovation Challenges</a>
+
+                            
+                                <button class="ng-icon ng-icon-directiondown" aria-haspopup="true" aria-expanded="false" aria-visible="false"></button>
+                            
+
+                            
+                            <ul class="level3-list" role="menu">
+
+                                
+                                    
+                                    <li class="level3-node">
+                                        <a href="/funding-opportunities/innovation-challenges/plastic/" role="menuitem" class="header-nav-link">Ocean Plastic Challenge</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                            
+
+                        </li>
+                        
+
+                    
+
+                        
+
+                    
+
+                        
+                        <li class="level2-node">
+                            <a href="/give" class="header-nav-link">Support Our Work</a>
+
+                            
+
+                            
+
+                        </li>
+                        
+
+                    
+                </ul>
+                
+
+            </li>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            </div>
+
+        </ul>
+
+        
+
+
+
+
+<footer id="mobile-nav-footer">
+    
+    <div class="ng-c-footer-container ng-padding-medium-vertical">
+        <div class="ng-padding-large-horizontal ng-padding-large-vertical">
+            <div class="ng-grid ng-flex ng-flex-wrap">
+                <!-- Upper Left side of footer -->
+                <div class="ng-width-medium-1-4 ng-padding-small-right">
+                    <div class="ng-c-footer-logo ng-margin-medium-bottom">
+                        <a href="/" class="ngg-link-unstyled">
+                            <img src="/static/images/logos/nglogo-stacked-white.min.6f3b65fe2af6.svg" style="width: 180px;" />
+                        </a>
+                    </div>
+                    <div class="ng-c-footer-address ng-margin-medium-bottom">
+                        <p class="ng-edit-light ng-color-white">
+                          National Geographic Headquarters<br/>
+                          1145 17th Street NW<br/>
+                          Washington, DC 20036
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Upper Right Side of Footer -->
+                <div class="ng-width-medium-1-2">
+                    <div class="ng-grid">
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">ABOUT</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/about-us/" class="ng-border-remove ng-color-white ng-edit-light">National Geographic Society</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="https://www.nationalgeographicpartners.com/about/" class="ng-border-remove ng-color-white ng-edit-light">National Geographic Partners</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="//blog.nationalgeographic.org/" class="ng-border-remove ng-color-white ng-edit-light">News and Impact</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/support/" class="ng-border-remove ng-color-white ng-edit-light">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">EXPLORE</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/find-explorers/" class="ng-border-remove ng-color-white ng-edit-light">Our Explorers</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/projects/" class="ng-border-remove ng-color-white ng-edit-light">Our Projects</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/education/" class="ng-border-remove ng-color-white ng-edit-light">Resources for Educators</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/events/" class="ng-border-remove ng-color-white ng-edit-light">Museum and Events</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/labs/" class="ng-border-remove ng-color-white ng-edit-light">Technology and Innovation</a></li>
+                            </ul>
+                        </div>
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">JOIN US</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/give/" class="ng-border-remove ng-color-white ng-edit-light">Ways to Give</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/funding-opportunities/grants/" class="ng-border-remove ng-color-white ng-edit-light">Apply for a Grant</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="https://www.nationalgeographicpartners.com/careers/" class="ng-border-remove ng-color-white ng-edit-light">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-4 ng-text-center">
+                    <div class="ng-align-medium-right ng-text-center ng-c-footer-buttons">
+                        <a href="https://give.nationalgeographic.org/page/49060/donate/1" target="_blank" role="button" class="ng-button ng-button-large ng-button-primary ng-margin-medium-bottom donate-btn">Donate</a>
+                        <a href="https://give.nationalgeographic.org/page/49156/subscribe/1" target="_blank" role="button" class="ng-button ng-button-large get-updates-btn newsletter-btn">Get Updates</a>
+                    </div>
+                </div>
+
+                <!-- Lower Left Side of Footer -->
+                <div class="ng-width-medium-1-4">
+                    <div class="ng-c-footer-social-module">
+                        <h6 class="ng-color-white ng-padding-medium-top ng-margin-medium-bottom">Connect</h6>
+                        <div>
+                            <a href="https://www.facebook.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-facebook ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://twitter.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-twitter ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.instagram.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-instagram ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.youtube.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-youtube ng-margin-medium-right ng-color-white" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="ng-c-footer-social-module-mobile ng-text-center ng-margin-medium-top">
+                        <h6 class="ng-color-white ng-margin-bottom">Connect</h6>
+                        <div>
+                            <a href="https://www.facebook.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-facebook ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://twitter.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-twitter ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.instagram.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-instagram ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.youtube.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-youtube ng-margin-medium-right ng-color-white" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lower Right Side of Footer -->
+                <div class="ng-width-medium-3-4">
+                    <div class="ng-margin-medium-top">
+                        <p class="ng-c-footer-info ng-color-mdgray ng-edit-light ">National Geographic Society is a 501 (c)(3) organization. © 1996 - 2019 National Geographic Society. All rights reserved.<br />
+                        <a href="/privacy-notice/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Privacy Notice</span></a>&nbsp;|&nbsp;
+                        <a href="/sustainability-policy/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Sustainability Policy</span></a>&nbsp;|&nbsp;
+                        <a href="/terms-of-service/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Terms of Service</span></a>&nbsp;|&nbsp;
+                        <a href="/ethics/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Code of Ethics</span></a></p>
+                    </div>
+                </div>
+            </div> <!-- outermost ng-grid -->
+        </div>
+    </div> <!-- ng-c-footer-container -->
+</footer>
+
+
+    </div>
+
+</nav>
+
+
+
+
+
+</div>
+
+
+
+<div id="header-nav-spacer"></div>
+
+
+
+<div id="start-of-content"></div>
+
+
+
+    
+
+
+    </div>
+<div class="ng-container-large ng-container ng-container-center ng-width-1-1" style="background: #fff">
+
+
+<div id="bodyalert">
+
+</div>
+
+
+
+  
+  
+    
+    
+    
+    <header class="ng-margin-large-bottom ng-article ng-margin-large-top"><h2 class="ng-c-kicker ng-margin-small-bottom"><a href="/education/resource-library/">Resource Library</a> |
+    <span class="ng-text-normal">Article</span></h2><h1 class="ng-text-edit-l ng-article-title ng-margin-bottom" itemprop="headline">
+          Greenhouse Effect
+        </h1><p class="ng-margin-medium-bottom ng-width-1-1 ng-width-medium-1-2" itemprop="alternativeTitle" >The greenhouse effect happens when certain gases, which are known as greenhouse gases, accumulate in Earth&rsquo;s atmosphere. Greenhouse gases include carbon dioxide (CO2), methane (CH4), nitrous oxide (N2O), ozone (O3), and fluorinated gases.</p><div class="datas-container ng-grid"><div class="data-container ng-md-padding-large-right ng-xs-padding-medium-bottom ng-md-padding-bottom-remove ng-width-1-1 ng-width-medium-2-8"><p class="label ng-c-kicker ng-margin-small-bottom">Grades</p><p class="data ng-margin-remove">6 - 12+</p></div><div class="data-container ng-md-padding-large-horizontal ng-xs-padding-medium-bottom ng-md-padding-bottom-remove ng-width-1-1 ng-width-medium-3-8"><p class="label ng-c-kicker ng-margin-small-bottom">Subjects</p><p class="data ng-margin-remove search-item-category">Biology, Ecology, Earth Science, Geography, Human Geography</p></div><div class="data-container ng-md-padding-large-left ng-xs-padding-medium-bottom ng-md-padding-bottom-remove ng-width-1-1 ng-width-medium-3-8 "><p class="label ng-c-kicker ng-margin-small-bottom">Contents</p><p class="data ng-margin-remove">5 Images</p></div></div></header>
+
+  
+
+
+  
+    
+
+    <div id="article-content" class="ng-grid ng-grid-divider ng-margin-remove">
+    </div>
+
+
+
+
+
+    
+
+
+<button ng-bookmark="aa9d7f0f-b2c1-4390-a8e7-092627fc4bbe" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden floaty-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop floaty-drop" id="drop-bookmark-aa9d7f0f-b2c1-4390-a8e7-092627fc4bbe">
+</div>
+
+
+    <div id="article-content" class="ng-grid ng-grid-preserve ng-grid-divider ng-margin-remove">
+      <article class="ng-width-1-1 ng-padding-remove">
+        
+          <section id="main-banner" class="
+    
+        ng-panel
+    
+">
+            
+    
+    
+
+    
+        <!-- SEVERAL ITEMS IN RESOURCE CAROUSEL -->
+        <div id="rc-content" class=" ng-width-1-1 ng-margin-top ng-margin-bottom ng-padding-remove ng-text-left"></div>
+    
+
+            <div class="ng-margin-top">
+              
+    
+    
+
+    
+    <p class="ng-text-center">
+        
+            <span class="sr-only">This lists the logos of programs or partners of <abbr title="National Geographic">NG</abbr> Education which have provided or contributed the content on this page.</span>
+        
+    
+        <strong>Leveled by</strong><a href="https://newsela.com/" class="ng-unstyled">
+
+    <img src="https://media.nationalgeographic.org/assets/acknowledge/logos/Newsela100px.jpg" alt="Newsela">
+
+</a>
+
+    
+    </p>
+    
+
+
+
+            </div>
+          </section>
+        
+      </article>
+
+      <article class="ng-width-small-1-1 ng-width-large-2-3 ng-align-center ng-border-remove ng-padding-remove" role="main">
+
+        <div class="ng-margin-large-top ng-margin-large-bottom">
+          
+    
+        
+        
+
+
+<ul class="ng-article-sharing ng-clearfix ng-padding-left-remove ng-width-1-1 center ng-margin-top">
+    <li>
+        <a class="addthis_button_twitter" href="https://twitter.com/share?url=&amp;text=&amp;" target="_blank"
+      rel="noopener noreferrer" title=" Click on this button to share via Twitter">
+      <i class="ng-icon ng-color-twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M28.7 8.5v.8c0 8.7-6.6 18.6-18.6 18.6C6.3 28 2.9 27 0 25.1c.5.1 1 .1 1.6.1 3.1 0 5.9-1 8.1-2.8-2.8-.1-5.3-1.9-6.1-4.6.3.1.8.1 1.2.1.6 0 1.2-.1 1.7-.2-3-.6-5.2-3.3-5.2-6.5v-.1c.9.6 1.9.9 2.9.9-1.7-1.2-2.9-3.2-2.9-5.5 0-1.2.3-2.3.9-3.3 3.3 4 8.1 6.6 13.5 6.8-.1-.4-.2-1-.2-1.5 0-3.6 2.9-6.5 6.6-6.5 1.9 0 3.5.8 4.7 2 1.5-.3 2.9-.8 4.2-1.5-.5 1.5-1.5 2.8-2.8 3.6 1.3-.2 2.6-.6 3.8-1-.9 1.4-2.1 2.5-3.3 3.4z"/></svg></i>
+      <span class="sr-only">Twitter</span>
+    </a>
+    </li>
+    <li>
+        <a class="addthis_button_facebook" href="https://www.facebook.com/sharer.php?u=" target="_blank" rel="noopener noreferrer"
+      title=" Click on this button to share via Facebook">
+      <i class="ng-icon ng-color-facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.9 266.9"><path d="M248.1 4.6H18.8C11 4.6 4.6 11 4.6 18.8v229.3c0 7.9 6.4 14.2 14.2 14.2h123.4v-99.8h-33.6v-38.9h33.6V94.9c0-33.3 20.3-51.4 50-51.4 14.2 0 26.5 1.1 30 1.5v34.8h-20.6c-16.1 0-19.3 7.7-19.3 18.9v24.8h38.5l-5 38.9h-33.5v99.8H248c7.9 0 14.2-6.4 14.2-14.2V18.8c.1-7.8-6.3-14.2-14.1-14.2z"/></svg></i>
+      <span class="sr-only">Facebook</span>
+    </a>
+    </li>
+    <li>
+        <a class="pinterest addthis_button_pinterest" href="https://pinterest.com/pin/create/bookmarklet/?url="
+      target="_blank" rel="noopener noreferrer" title=" Click on this button to pin this url">
+      <i class="ng-icon ng-color-pinterest"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 21.2c-.8 4.4-1.9 8.6-4.9 10.8-.9-6.7 1.4-11.7 2.5-17-1.8-3.1.2-9.3 4.1-7.8 4.8 1.9-4.1 11.5 1.8 12.7 6.2 1.3 8.8-10.8 4.9-14.7-5.6-5.7-16.2-.1-14.9 8 .3 2 2.4 2.6.8 5.3-3.6-.8-4.6-3.6-4.5-7.4C3.8 5 9.1.7 14.4.1c6.7-.8 13 2.5 13.9 8.8 1 7.1-3 14.9-10.2 14.3-2-.1-2.8-1.1-4.3-2z"/></svg></i>
+      <span class="sr-only">Pinterest</span>
+    </a>
+    </li>
+    
+    <li>
+        <a class="google-classroom addthis_button_google_classroom" href="#" target="_blank" rel="noopener noreferrer"
+      title=" Click on this button to share via Google Classroom">
+      <i class="ng-icon ng-color-googleclassroom"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect width="48" height="48" fill="#FFC112"/><rect x="4" y="4" width="40" height="40" fill="#21A465"/><g transform="translate(8 16)"><path d="m28 6c0-1.1044-0.89556-2-2-2s-2 0.89556-2 2 0.89556 2 2 2 2-0.89556 2-2zm-2 3c-2.892 0-6 1.4194-6 3.175v1.825h12v-1.825c0-1.7556-3.108-3.175-6-3.175zm-18-3c0-1.1044-0.89556-2-2-2s-2 0.89556-2 2 0.89556 2 2 2 2-0.89556 2-2zm-2 3c-2.892 0-6 1.4194-6 3.175v1.825h12v-1.825c0-1.7556-3.108-3.175-6-3.175z" fill="#57BB8A"/><path d="m16.002 6c1.655 0 2.9975-1.3425 2.9975-3 0-1.655-1.3425-3-2.9975-3-1.6575 0-3.0025 1.345-3.0025 3 0 1.6575 1.345 3 3.0025 3zm-7.8313 5.6667v2.3333h15.829v-2.3333c0-2.5783-4.0985-4.6667-7.9144-4.6667-3.8159 0-7.9144 2.0883-7.9144 4.6667z" fill="#F7F7F7"/></g><polygon points="28 41 40 41 40 44 28 44" fill="#F1F1F1"/></g></svg></i>
+      <span class="sr-only">Google Classroom</span>
+    </a>
+    </li>
+    
+    
+    <li>
+        <a class="addthis_button_email" href="#" title=" Click on this button to share via email">
+      <i class="ng-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M0 28.9V3.1h32V29H0zm2.4-2.4h27.1V7.3L16 20.9 2.4 7.3v19.2zM16 17.2L27.7 5.5H4.3L16 17.2z"/></svg></i>
+      <span class="sr-only">Email</span>
+    </a>
+    </li>
+    
+    
+    <li>
+        <a href="#print_link" class="addthis_button_print"
+           title=" Click on this button to get to the printer friendly version">
+      <i class="ng-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30 8.8h-4V6l-4-4H6v6.8H2V25h4v5h20v-5h4V8.8zM8 4h13.2L24 6.8v2H8V4zm16 21v3H8v-9h16v6zm4-2h-2v-6H6v6H4V12.8h24V23z"/><path d="M10 21h12v2H10zm0 3h12v2H10z"/></svg></i>
+      <span class="sr-only">Print</span>
+    </a>
+    </li>
+    
+    
+    
+</ul>
+
+
+    
+
+        </div>
+
+        
+          <section id="main-content" class="ng-panel">
+            
+            
+<div class="ng-tabs" ng-tabs="">
+  <div class="ng-tab-triggers-container">
+     <div class="ng-tab-triggers">
+        
+          <button aria-controls="tab1" class="ng-tab-trigger">Article</button>
+        
+        
+        
+          <button aria-controls="tab3" class="ng-tab-trigger">Vocabulary</button>
+        
+     </div>
+  </div>
+  <div class="ng-tab-panes-container">
+      
+       <div class="ng-tab-pane" id="tab1">
+          <div class="ng-width-medium-3-4 ng-container-center">
+          
+          
+
+
+
+          
+          <div class="ng-width-1-1">
+              
+    
+    <p class="ng-article-meta">
+        Friday, May 18, 2018
+        <meta itemprop="datePublished" content="2018-05-18">
+    </p>
+    <div class="ng-article-oldstyle" itemprop="articleBody">
+        
+        
+
+
+
+<div class="ng-audience-variations-container">
+    <p class="ng-audience-label ng-text-bold">Select Text Level:</p>
+    <div class="ng-audience-variations">
+    <a class="ng-button ng-audience-button"
+            itemscope itemtype="https://schema.org/EducationalAudience" itemprop="audience"
+            href="/article/greenhouse-effect/4th-grade">
+            4<sup>th</sup> Grade
+        </a><a class="ng-button ng-audience-button"
+            itemscope itemtype="https://schema.org/EducationalAudience" itemprop="audience"
+            href="/article/greenhouse-effect/6th-grade">
+            6<sup>th</sup> Grade
+        </a><a class="ng-button ng-audience-button"
+            itemscope itemtype="https://schema.org/EducationalAudience" itemprop="audience"
+            href="/article/greenhouse-effect/8th-grade">
+            8<sup>th</sup> Grade
+        </a><a class="ng-button ng-audience-button ng-active"
+            itemscope itemtype="https://schema.org/EducationalAudience" itemprop="audience"
+            href="/article/greenhouse-effect/12th-grade">
+            12<sup>th</sup> Grade
+        </a>
+    </div>
+</div>
+
+
+        <p>The <a class="tipHelp" title="greenhouse">greenhouse</a> effect happens when certain gases, which are known as greenhouse gases, accumulate in Earth&rsquo;s <a class="tipHelp" title="atmosphere">atmosphere</a>. Greenhouse gases include <a class="tipHelp" title="carbon">carbon</a> dioxide (CO<sub>2</sub>), <a class="tipHelp" title="methane">methane</a> (CH<sub>4</sub>), <a class="tipHelp" title="nitrous oxide">nitrous oxide</a> (N<sub>2</sub>O), <a class="tipHelp" title="ozone">ozone</a> (O<sub>3</sub>), and fluorinated gases.</p>
+<p>&nbsp;</p>
+<p>Greenhouse gases allow the sun&rsquo;s light to shine onto Earth&rsquo;s surface, and then the gases, such as ozone, trap the heat that reflects back from the surface inside Earth&rsquo;s atmosphere. The gases act like the glass walls of a&nbsp;greenhouse&mdash;thus the name, greenhouse <a class="tipHelp" title="gas">gas</a>.</p>
+<p>&nbsp;</p>
+<p>According to scientists, the average <a class="tipHelp" title="temperature">temperature</a> of Earth would drop from 14&#730;C (57&#730;F) to as low as &ndash;18&#730;C (&ndash;0.4&#730;F), without the <a class="tipHelp" title="greenhouse effect">greenhouse effect</a>.</p>
+<p>&nbsp;</p>
+<p>Some greenhouse gases come from natural sources, for example, <a class="tipHelp" title="evaporation">evaporation</a>&nbsp;adds water <a class="tipHelp" title="vapor">vapor</a> to the atmosphere. Animals and plants release <a class="tipHelp" title="carbon dioxide">carbon dioxide</a> when they respire, or breathe. Methane is released naturally from decomposition. There is evidence that suggests methane is released in low-oxygen environments, such as&nbsp;swamps or landfills. Volcanoes&mdash;both on land and under the <a class="tipHelp" title="ocean">ocean</a>&mdash;release greenhouse gases, so periods of high volcanic activity tend to be warmer.</p>
+<p>&nbsp;</p>
+<p>Since the&nbsp;<a class="tipHelp" title="Industrial Revolution">Industrial Revolution</a>&nbsp;of the late 1700s and early 1800s, people have been releasing larger quantities of greenhouse gases into the atmosphere. That amount has skyrocketed in the past century. <a class="tipHelp" title="Greenhouse gas">Greenhouse gas</a> emissions increased 70 percent between 1970 and 2004. Emissions of CO<sub>2</sub>, rose by about 80 percent during that time.</p>
+<p>&nbsp;</p>
+<p>The amount of CO<sub>2</sub> in the atmosphere far exceeds the naturally occurring range seen during the last 650,000 years.</p>
+<p>&nbsp;</p>
+<p>Most of the CO<sub>2</sub> that people put into the atmosphere comes from burning&nbsp;fossil fuels. Cars, trucks, trains, and planes all burn fossil fuels. Many electric power plants do as well. Another way humans release CO<sub>2</sub> into the atmosphere is by cutting down&nbsp;forests, because trees contain large amounts of carbon.</p>
+<p><br /> People add methane to the atmosphere through&nbsp;<a class="tipHelp" title="livestock">livestock</a>&nbsp;farming, landfills, and <a class="tipHelp" title="fossil fuel">fossil fuel</a> production such as&nbsp;<a class="tipHelp" title="coal">coal</a>&nbsp;<a class="tipHelp" title="mining">mining</a>&nbsp;and <a class="tipHelp" title="natural gas">natural gas</a> processing. Nitrous oxide comes from&nbsp;<a class="tipHelp" title="agriculture">agriculture</a>&nbsp;and fossil fuel burning. Fluorinated gases include chlorofluorocarbons (CFCs),&nbsp;hydrochlorofluorocarbons (HCFCs), and hydrofluorocarbons (HFCs). They are produced during the manufacturing of refrigeration and cooling products and through aerosols.</p>
+<p><br /> All of these human activities add greenhouse gases to the atmosphere. As the level of these gases rises, so does the&nbsp;temperature&nbsp;of Earth. The rise in Earth&rsquo;s average temperature contributed to by human activity is known as&nbsp;<a class="tipHelp" title="global warming">global warming</a>.<em></em></p>
+<p><br /> <strong>The Greenhouse Effect and <a class="tipHelp" title="Climate">Climate</a> Change</strong><br /> <br /> Even slight increases in average global temperatures can have huge effects.</p>
+<p>&nbsp;</p>
+<p>Perhaps the biggest, most obvious effect is that&nbsp;glaciers and&nbsp;ice caps melt faster than usual. The&nbsp;<a class="tipHelp" title="meltwater">meltwater</a>&nbsp;drains into the oceans, causing&nbsp;sea levels to rise.</p>
+<p>&nbsp;</p>
+<p>Glaciers and ice caps cover about 10 percent of the world&rsquo;s landmasses. They hold between 70 and 75 percent of the world&rsquo;s&nbsp;<a class="tipHelp" title="freshwater">freshwater</a>. If all of this ice melted, sea levels would rise by about 70 meters (230 feet).</p>
+<p>&nbsp;</p>
+<p>The Intergovernmental Panel on Climate Change states that the global <a class="tipHelp" title="sea level">sea level</a> rose about 1.8 millimeters (0.07 inches) per year from 1961 to 1993, and about 3.1 millimeters (0.12 inches) per year since 1993.</p>
+<p>&nbsp;</p>
+<p>Rising sea levels cause&nbsp;flooding in&nbsp;coastal cities, which could displace millions of people in low-lying areas such as Bangladesh, the U.S. state of Florida, and the Netherlands.</p>
+<p>&nbsp;</p>
+<p>Millions more people in countries like Bolivia, Peru, and India depend on glacial meltwater for drinking,&nbsp;<a class="tipHelp" title="irrigation">irrigation</a>, and&nbsp;<a class="tipHelp" title="hydroelectric power">hydroelectric power</a>. Rapid loss of these glaciers would devastate those countries.</p>
+<p>&nbsp;</p>
+<p>Greenhouse gas emissions affect more than just temperature. Another effect involves changes in&nbsp;<a class="tipHelp" title="precipitation">precipitation</a>, such as&nbsp;<a class="tipHelp" title="rain">rain</a>&nbsp;and&nbsp;<a class="tipHelp" title="snow">snow</a>.</p>
+<p>&nbsp;</p>
+<p>Over the course of the 20th century, precipitation increased in eastern parts of North and South America, northern Europe, and northern and central Asia. However, it has decreased in parts of Africa, the Mediterranean, and southern Asia.</p>
+<p>&nbsp;</p>
+<p>As climates change, so do the habitats for living things. Animals that are adapted to a certain&nbsp;climate&nbsp;may become threatened. Many human societies depend on predictable rain patterns in order to grow specific&nbsp;crops for food, clothing, and trade. If the climate of an area changes, the people who live there may no longer be able to grow the crops they depend on for survival. Some scientists also worry that <a class="tipHelp" title="tropical">tropical</a> diseases will expand their ranges into what are now more <a class="tipHelp" title="temperate">temperate</a> regions if the temperatures of those areas increase.</p>
+<p>&nbsp;</p>
+<p>Most climate scientists agree that we must reduce the amount of greenhouse gases released into the atmosphere. Ways to do this, include:</p>
+<ul>
+<li>driving less, using <a class="tipHelp" title="public transportation">public transportation</a>, carpooling, walking, or riding a bike.</li>
+<li>flying less&mdash;airplanes produce huge amounts of greenhouse gas emissions.</li>
+<li>reducing, reusing, and&nbsp;recycling.</li>
+<li>planting a tree&mdash;trees absorb carbon dioxide, keeping it out of the atmosphere.</li>
+<li>using less&nbsp;<a class="tipHelp" title="electricity">electricity</a>.</li>
+<li>eating less meat&mdash;cows are one of the biggest methane producers.</li>
+<li>supporting alternative energy sources that don&rsquo;t burn fossil fuels.</li>
+</ul>
+<p>&nbsp;</p>
+    </div>
+
+          </div>
+
+          <div class="ng-padding-small ng-width-1-1 ng-hidden-small ng-hidden-mini ng-text-center">
+              <div class="ng-width-1-1 ng-panel ng-thumbnail" itemprop="image"  itemscope itemtype="http://schema.org/ImageObject">
+                  <img src="https://media.nationalgeographic.org/assets/photos/315/523/ed5faa62-24bc-48d8-963c-f2aaf00a004e_c95-0-1904-1357_r160x120.jpg?81c01c4343ceb57f47a60c00232d7133754e0659" itemprop="contentURL" alt="Greenhouse Effect" width="160" height="120">
+                  <div class="ng-thumbnail-caption ng-text-center">
+                      <span itemprop="caption">The greenhouse effect is a vital natural phenomenon, intensified by human activity.</span>
+                      <p class="ng-text-small" itemprop="author">Photograph by James P. Blair</p>
+                  </div>
+              </div>
+              
+                  
+                      <div class="ng-panel ng-panel-box ng-margin-small-top ng-text-left"><p><strong>Manmade Gas</strong></p>
+<p>Chlorofluorocarbons (CFCs) are the only greenhouse gases not created by nature. They are created through refrigeration and aerosol cans.</p>
+<p>CFCs, used mostly as refrigerants, are chemicals that were developed in the late 19th century and came into wide use in the mid-20th century.</p>
+<p>Other greenhouse gases, such as carbon dioxide, are emitted by human activity, at an unnatural and unsustainable level, but the molecules do occur naturally in the Earth's atmosphere.</p></div>
+                  
+              
+              
+          </div>
+        
+        </div>
+       </div>
+       
+
+       
+
+       
+          <div class="ng-tab-pane" id="tab3">
+            <div class="ng-width-medium-3-4 ng-container-center">
+              
+
+
+<div class="ng-vocabulary-grid">
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>aerosol can</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>container of liquid material under high pressure. When released through a small opening, the liquid becomes a spray or foam.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/agriculture/" title="Encyclopedic Entry: agriculture">
+          <strong>agriculture</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>the art and science of cultivating land for growing crops (farming) or raising livestock (ranching).</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/atmosphere/" title="Encyclopedic Entry: atmosphere">
+          <strong>atmosphere</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>layers of gases surrounding a planet or other celestial body.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>carbon</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>chemical element with the symbol C, which forms the basis of all known life.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>carbon dioxide</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>greenhouse gas produced by animals during respiration and used by plants during photosynthesis. Carbon dioxide is also the byproduct of burning fossil fuels.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>chlorofluorocarbon (CFC)</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>chemical compound mostly used in refrigerants and flame-retardants. Some CFCs have destructive effects on the ozone layer.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/all-about-climate/" title="Encyclopedic Entry: All About Climate">
+          <strong>climate</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>all weather conditions for a given location over a period of time.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/coal/" title="Encyclopedic Entry: Coal">
+          <strong>coal</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>dark, solid fossil fuel mined from the earth.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/coast/" title="Encyclopedic Entry: coast">
+          <strong>coast</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>edge of land along the sea or other large body of water.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/crop/" title="Encyclopedic Entry: crop">
+          <strong>crop</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>agricultural produce.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>electricity</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>set of physical phenomena associated with the presence and flow of electric charge.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>environment</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>conditions that surround and influence an organism or community.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/process-evaporation/" title="Encyclopedic Entry: The Process of Evaporation">
+          <strong>evaporation</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>process by which liquid water becomes water vapor.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/flood/" title="Encyclopedic Entry: flood">
+          <strong>flood</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>overflow of a body of water onto land.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>fluorinate</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Verb</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>to add or combine with the element fluorine (F).</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>forest</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>ecosystem filled with trees and underbrush.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>fossil fuel</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>coal, oil, or natural gas. Fossil fuels formed from the remains of ancient plants and animals.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>freshwater</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>water that is not salty.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>gas</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>state of matter with no fixed shape that will fill any container uniformly. Gas molecules are in constant, random motion.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/glacier/" title="Encyclopedic Entry: Glacier">
+          <strong>glacier</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>mass of ice that moves slowly over land.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/greenhouse-effect/" title="Encyclopedic Entry: Greenhouse Effect">
+          <strong>global warming</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>increase in the average temperature of the Earth's air and oceans.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>greenhouse</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>building, often made of glass or other clear material, used to help plants grow.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/greenhouse-effect/" title="Encyclopedic Entry: Greenhouse Effect">
+          <strong>greenhouse effect</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>phenomenon where gases allow sunlight to enter Earth's atmosphere but make it difficult for heat to escape.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>greenhouse gas</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>gas in the atmosphere, such as carbon dioxide, methane, water vapor, and ozone, that absorbs solar heat reflected by the surface of the Earth, warming the atmosphere.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/habitat/" title="Encyclopedic Entry: habitat">
+          <strong>habitat</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>environment where an organism lives throughout the year or for shorter periods of time.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>hydrochlorofluorocarbon</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>greenhouse gas often used as an industrial cooling material.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>hydroelectric power</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>usable energy generated by moving water converted to electricity.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>hydrofluorocarbon</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>greenhouse gas often used as an industrial cooling material.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/ice-cap/" title="Encyclopedic Entry: ice cap">
+          <strong>ice cap</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>area of fewer than 50,000 square kilometers (19,000 square miles) covered by ice.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>Industrial Revolution</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>change in economic and social activities, beginning in the 18th century, brought by the replacement of hand tools with machinery and mass production.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/irrigation/" title="Encyclopedic Entry: irrigation">
+          <strong>irrigation</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>watering land, usually for agriculture, by artificial means.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>landfill</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>site   where garbage is layered with dirt and other absorbing material to prevent   contamination of the surrounding land or water.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>livestock</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">noun, plural noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>animals raised for sale and profit.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>meltwater</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>freshwater that comes from melting snow or ice.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>methane</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>chemical compound that is the basic ingredient of natural gas.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>microbial</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Adjective</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>having to do with very small organisms.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>mining</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>process of extracting ore from the Earth.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>molecule</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>smallest physical unit of a substance,   consisting of two or more atoms linked together.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/natural-gas/" title="Encyclopedic Entry: Natural Gas">
+          <strong>natural gas</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>type of fossil fuel made up mostly of the   gas methane.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>nitrous oxide</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>greenhouse gas used in medicine and the   manufacture of rockets. Also known as laughing gas or happy gas.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/all-about-the-ocean/" title="Encyclopedic Entry: All About the Ocean">
+          <strong>ocean</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>large body of salt water that covers most of the Earth.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>ozone</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>form of oxygen that absorbs ultraviolet   radiation.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>power plant</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>industrial facility for the generation of electric energy.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/types-precipitation/" title="Encyclopedic Entry: Types of Precipitation">
+          <strong>precipitation</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>all forms in which water falls to Earth from the atmosphere.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>public transportation</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>methods of movement that are available to   all community members for a fee, and which follow a fixed route and schedule:   buses, subways, trains and ferries.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/rain/" title="Encyclopedic Entry: rain">
+          <strong>rain</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>liquid precipitation.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>recycle</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Verb</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>to clean or process in order to make   suitable for reuse.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>reflect</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Verb</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>to rebound or return light from a surface.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>refrigerant</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>substance used to keep materials cool.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>respiration</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>breathing.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/sea-level/" title="Encyclopedic Entry: sea level">
+          <strong>sea level</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>base level for measuring elevations. Sea level is determined by measurements taken over a 19-year cycle.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>snow</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>precipitation made of ice crystals.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/swamp/" title="Encyclopedic Entry: swamp">
+          <strong>swamp</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>land permanently saturated with water and sometimes covered with it.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>temperate</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Adjective</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>moderate.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/temperature/" title="Encyclopedic Entry: temperature">
+          <strong>temperature</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>degree of hotness or coldness measured by a thermometer with a numerical scale.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>tropical</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Adjective</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>existing in the tropics, the latitudes   between the Tropic of Cancer in the north and the Tropic of Capricorn in the   south.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+        <strong>vapor</strong>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>visible liquid suspended in the air, such   as fog.</p></span>
+    </div>
+  </div>
+  
+   <div class="ng-vocabulary-row">
+    <div class="ng-vocabulary-term">
+      
+      <a href="/encyclopedia/plate-tectonics-volcanic-activity/" title="Encyclopedic Entry: Plate Tectonics and Volcanic Activity">
+          <strong>volcano</strong>
+      </a>
+      
+    </div>
+    <div class="ng-vocabulary-speech-part">
+      <span class="ng-text-italic">Noun</span>
+    </div>
+    <div class="ng-vocabulary-definition">
+      <span><p>an opening in   the Earth's crust, through which lava, ash, and gases erupt, and also the cone built by eruptions.</p></span>
+    </div>
+  </div>
+  
+</div>
+<script type="text/javascript">
+  $(document).ready(function(e) {
+      var vocabulary = [
+      
+          {
+              value: "aerosol can",
+              phonetic: "(AIR-uh-sahl KAN)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Econtainer of liquid material under high pressure. When released through a small opening, the liquid becomes a spray or foam.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "agriculture",
+              phonetic: "(A-grih-kuhl-cher)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ethe art and science of cultivating land for growing crops (farming) or raising livestock (ranching).\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/agriculture/"
+          },
+      
+          {
+              value: "atmosphere",
+              phonetic: "(AT-muhs-feer)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Elayers of gases surrounding a planet or other celestial body.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/atmosphere/"
+          },
+      
+          {
+              value: "carbon",
+              phonetic: "(KAR-bun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Echemical element with the symbol C, which forms the basis of all known life.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "carbon dioxide",
+              phonetic: "(KAR-buhn di-AHK-sid)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Egreenhouse gas produced by animals during respiration and used by plants during photosynthesis. Carbon dioxide is also the byproduct of burning fossil fuels.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "chlorofluorocarbon (CFC)",
+              phonetic: "(klohr-oh-flohr-oh-KAR-buhn)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Echemical compound mostly used in refrigerants and flame\u002Dretardants. Some CFCs have destructive effects on the ozone layer.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "climate",
+              phonetic: "(KLI-mut)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eall weather conditions for a given location over a period of time.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/all-about-climate/"
+          },
+      
+          {
+              value: "coal",
+              phonetic: "(KOHL)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Edark, solid fossil fuel mined from the earth.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/coal/"
+          },
+      
+          {
+              value: "coast",
+              phonetic: "(KOHST)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eedge of land along the sea or other large body of water.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/coast/"
+          },
+      
+          {
+              value: "crop",
+              phonetic: "(KRAHP)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eagricultural produce.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/crop/"
+          },
+      
+          {
+              value: "electricity",
+              phonetic: "(eh-lehk-TRIH-seh-tee)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eset of physical phenomena associated with the presence and flow of electric charge.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "environment",
+              phonetic: "(en-VI-run-ment)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Econditions that surround and influence an organism or community.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "evaporation",
+              phonetic: "(ee-va-puh-RAY-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eprocess by which liquid water becomes water vapor.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/process-evaporation/"
+          },
+      
+          {
+              value: "flood",
+              phonetic: "(FLUD)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eoverflow of a body of water onto land.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/flood/"
+          },
+      
+          {
+              value: "fluorinate",
+              phonetic: "(FLOR-ih-nayt)",
+              partofspeech: "Verb",
+              definition: "\u003Cp\u003Eto add or combine with the element fluorine (F).\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "forest",
+              phonetic: "(FOR-ehst)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eecosystem filled with trees and underbrush.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "fossil fuel",
+              phonetic: "(FAH-sul FYOOL)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ecoal, oil, or natural gas. Fossil fuels formed from the remains of ancient plants and animals.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "freshwater",
+              phonetic: "(FREHSH-wah-tur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ewater that is not salty.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "gas",
+              phonetic: "(GAS)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Estate of matter with no fixed shape that will fill any container uniformly. Gas molecules are in constant, random motion.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "glacier",
+              phonetic: "(GLAY-shur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Emass of ice that moves slowly over land.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/glacier/"
+          },
+      
+          {
+              value: "global warming",
+              phonetic: "(GLOH-bul WOR-mihng)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eincrease in the average temperature of the Earth\u0027s air and oceans.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/greenhouse-effect/"
+          },
+      
+          {
+              value: "greenhouse",
+              phonetic: "(GREEN-hows)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ebuilding, often made of glass or other clear material, used to help plants grow.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "greenhouse effect",
+              phonetic: "(GREEN-hows ih-FEHKT)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ephenomenon where gases allow sunlight to enter Earth\u0027s atmosphere but make it difficult for heat to escape.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/greenhouse-effect/"
+          },
+      
+          {
+              value: "greenhouse gas",
+              phonetic: "(GREEN-hows GAS)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Egas in the atmosphere, such as carbon dioxide, methane, water vapor, and ozone, that absorbs solar heat reflected by the surface of the Earth, warming the atmosphere.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "habitat",
+              phonetic: "(HA-bih-tat)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eenvironment where an organism lives throughout the year or for shorter periods of time.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/habitat/"
+          },
+      
+          {
+              value: "hydrochlorofluorocarbon",
+              phonetic: "(hi-droh-klor-oh-FLOR-oh-kar-bun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Egreenhouse gas often used as an industrial cooling material.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "hydroelectric power",
+              phonetic: "(hi-droh-ih-LEHK-trihk POW-ur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eusable energy generated by moving water converted to electricity.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "hydrofluorocarbon",
+              phonetic: "(hi-droh-FLOR-oh-kar-bun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Egreenhouse gas often used as an industrial cooling material.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "ice cap",
+              phonetic: "(IS KAP)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Earea of fewer than 50,000 square kilometers (19,000 square miles) covered by ice.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/ice-cap/"
+          },
+      
+          {
+              value: "Industrial Revolution",
+              phonetic: "(ihn-DUHS-tree-ul reh-voh-LOO-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Echange in economic and social activities, beginning in the 18th century, brought by the replacement of hand tools with machinery and mass production.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "irrigation",
+              phonetic: "(eer-ih-GAY-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ewatering land, usually for agriculture, by artificial means.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/irrigation/"
+          },
+      
+          {
+              value: "landfill",
+              phonetic: "(LAND-fihl)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Esite   where garbage is layered with dirt and other absorbing material to prevent   contamination of the surrounding land or water.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "livestock",
+              phonetic: "(LIV-stahk)",
+              partofspeech: "noun, plural noun",
+              definition: "\u003Cp\u003Eanimals raised for sale and profit.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "meltwater",
+              phonetic: "(MEHLT-wah-tur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Efreshwater that comes from melting snow or ice.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "methane",
+              phonetic: "(MEHTH-ayn)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Echemical compound that is the basic ingredient of natural gas.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "microbial",
+              phonetic: "(mi-KROH-bee-ul)",
+              partofspeech: "Adjective",
+              definition: "\u003Cp\u003Ehaving to do with very small organisms.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "mining",
+              phonetic: "(MI-nihng)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eprocess of extracting ore from the Earth.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "molecule",
+              phonetic: "(MAHL-ih-kyool)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Esmallest physical unit of a substance,   consisting of two or more atoms linked together.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "natural gas",
+              phonetic: "(NA-chur-rul GAS)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Etype of fossil fuel made up mostly of the   gas methane.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/natural-gas/"
+          },
+      
+          {
+              value: "nitrous oxide",
+              phonetic: "(NI-trus OKS-id)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Egreenhouse gas used in medicine and the   manufacture of rockets. Also known as laughing gas or happy gas.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "ocean",
+              phonetic: "(OH-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Elarge body of salt water that covers most of the Earth.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/all-about-the-ocean/"
+          },
+      
+          {
+              value: "ozone",
+              phonetic: "(OH-zohn)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eform of oxygen that absorbs ultraviolet   radiation.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "power plant",
+              phonetic: "(POW-ur PLANT)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eindustrial facility for the generation of electric energy.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "precipitation",
+              phonetic: "(pree-sih-pih-TAY-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eall forms in which water falls to Earth from the atmosphere.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/types-precipitation/"
+          },
+      
+          {
+              value: "public transportation",
+              phonetic: "(PUHB-lihk trans-pur-TAY-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Emethods of movement that are available to   all community members for a fee, and which follow a fixed route and schedule:   buses, subways, trains and ferries.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "rain",
+              phonetic: "(RAYN)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eliquid precipitation.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/rain/"
+          },
+      
+          {
+              value: "recycle",
+              phonetic: "(ree-SI-kul)",
+              partofspeech: "Verb",
+              definition: "\u003Cp\u003Eto clean or process in order to make   suitable for reuse.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "reflect",
+              phonetic: "(ree-FLEHKT)",
+              partofspeech: "Verb",
+              definition: "\u003Cp\u003Eto rebound or return light from a surface.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "refrigerant",
+              phonetic: "(ree-FRIH-jur-unt)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Esubstance used to keep materials cool.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "respiration",
+              phonetic: "(rehs-pihr-AY-shun)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ebreathing.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "sea level",
+              phonetic: "(SEE LEH-vul)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ebase level for measuring elevations. Sea level is determined by measurements taken over a 19\u002Dyear cycle.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/sea-level/"
+          },
+      
+          {
+              value: "snow",
+              phonetic: "(SNOH)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eprecipitation made of ice crystals.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "swamp",
+              phonetic: "(SWAHMP)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Eland permanently saturated with water and sometimes covered with it.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/swamp/"
+          },
+      
+          {
+              value: "temperate",
+              phonetic: "(TEHM-preht)",
+              partofspeech: "Adjective",
+              definition: "\u003Cp\u003Emoderate.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "temperature",
+              phonetic: "(TEHM-peh-chur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Edegree of hotness or coldness measured by a thermometer with a numerical scale.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/temperature/"
+          },
+      
+          {
+              value: "tropical",
+              phonetic: "(TRAH-pih-kul)",
+              partofspeech: "Adjective",
+              definition: "\u003Cp\u003Eexisting in the tropics, the latitudes   between the Tropic of Cancer in the north and the Tropic of Capricorn in the   south.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "vapor",
+              phonetic: "(VAY-pur)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Evisible liquid suspended in the air, such   as fog.\u003C/p\u003E",
+              encyclopedia: null
+          },
+      
+          {
+              value: "volcano",
+              phonetic: "(vawl-KAY-noh)",
+              partofspeech: "Noun",
+              definition: "\u003Cp\u003Ean opening in   the Earth\u0027s crust, through which lava, ash, and gases erupt, and also the cone built by eruptions.\u003C/p\u003E",
+              encyclopedia: "/encyclopedia/plate-tectonics-volcanic-activity/"
+          },
+      
+      ];
+
+      if (vocabulary.length)
+          $.NGkit.definition.initialize({source: vocabulary, selector:".tipHelp"});
+  });
+</script>
+
+            </div>
+          </div>
+       
+  </div>
+</div>
+
+
+
+<div class="ng-panel-themed ng-margin-top ng-margin-bottom ng-width-medium-3-4 ng-container-center">
+    
+
+
+
+
+    
+        
+        <p class="ng-text-edit-s ng-margin-bottom-remove">Audio &amp; Video</p>
+        <ul class="ng-list-bullet ng-margin-top-remove">
+    
+            <li>
+                <a href="http://www.nasa.gov/topics/earth/features/heat-molecules.html" target="_blank">
+                    NASA: NASA Traces Molecular Characteristics That Heat Earth
+                </a>
+            </li>
+    
+
+    
+        
+            </ul>
+        
+        <p class="ng-text-edit-s ng-margin-bottom-remove">Interactives</p>
+        <ul class="ng-list-bullet ng-margin-top-remove">
+    
+            <li>
+                <a href="http://environment.nationalgeographic.com/environment/global-warming/gw-overview-interactive.html" target="_blank">
+                    National Geographic Environment: Greenhouse Effect
+                </a>
+            </li>
+    
+
+    
+        
+            </ul>
+        
+        <p class="ng-text-edit-s ng-margin-bottom-remove">Websites</p>
+        <ul class="ng-list-bullet ng-margin-top-remove">
+    
+            <li>
+                <a href="http://unstats.un.org/unsd/environment/air_co2_emissions.htm" target="_blank">
+                    United Nations Statistics Division: Environmental Indicators—Greenhouse Gas Emissions
+                </a>
+            </li>
+    
+
+    
+            <li>
+                <a href="http://www.epa.gov/climatechange/kids/basics/today/greenhouse-effect.html" target="_blank">
+                    EPA: A Student's Guide to Global Climate Change—The Greenhouse Effect
+                </a>
+            </li>
+    
+
+    
+            <li>
+                <a href="http://www.oar.noaa.gov/k12/html/greenhouse2.html" target="_blank">
+                    NOAA Kids: Greenhouse Effect
+                </a>
+            </li>
+    
+        </ul>
+    
+
+
+</div>
+
+
+          </section>
+          
+
+
+        
+
+        
+          <section id="content-footer" class="ng-margin-large-top ng-padding-large-top ng-margin-bottom">
+
+            <ul ng-accordion="multiple: true" class="ng-accordion ng-accordion-large ng-margin-bottom-remove">
+            
+              <li>
+                <a name="credits" href="#" class="ng-accordion-title ng-margin-bottom">
+                  Credits
+                </a>
+
+              <div class="ng-accordion-content" id="credits-panel">
+                  
+    
+        
+                  <h4 class="ng-text-edit-s">Media Credits</h4>
+                  <p class="ng-margin-top-remove">The audio, illustrations, photos, and videos are credited beneath the media asset, except for promotional images, which generally link to another page that contains the media credit. The Rights Holder for media is the person or group credited.</p>
+                  
+    
+
+                  
+    
+        
+
+<article>
+    
+        <h4 class="ng-text-edit-s">Writers</h4>
+        <p>
+            
+                
+                    Kim Rutledge
+                <br/>
+            
+                
+                    Hilary Costa
+                <br/>
+            
+                
+                    Erin Sprout
+                <br/>
+            
+                
+                    Santani Teng
+                <br/>
+            
+                
+                    Melissa McDaniel
+                <br/>
+            
+                
+                    Diane Boudreau
+                <br/>
+            
+                
+                    Tara Ramroop
+                <br/>
+            
+                
+                    Jeff Hunt
+                <br/>
+            
+                
+                    Hilary Hall
+                <br/>
+            
+        </p>
+    
+        <h4 class="ng-text-edit-s">Illustrators</h4>
+        <p>
+            
+                
+                    Tim Gunther
+                <br/>
+            
+                
+                    Mary Crooks, National Geographic Society
+                <br/>
+            
+        </p>
+    
+        <h4 class="ng-text-edit-s">Editors</h4>
+        <p>
+            
+                
+                    Kara West
+                <br/>
+            
+                
+                    Jeannie Evers, Emdash Editing
+                <br/>
+            
+        </p>
+    
+        <h4 class="ng-text-edit-s">Educator Reviewer</h4>
+        <p>
+            
+                
+                    Nancy Wynne
+                <br/>
+            
+        </p>
+    
+        <h4 class="ng-text-edit-s">Producer</h4>
+        <p>
+            
+                
+                    Caryl-Sue, National Geographic Society
+                <br/>
+            
+        </p>
+    
+    
+    
+    
+        <h4 class="ng-text-edit-s">Sources</h4>
+        <p>Dunn, Margery G. (Editor). (1989, 1993). &quot;Exploring Your World: The Adventure of Geography.&quot; Washington, D.C.: National Geographic Society.</p>
+    
+</article>
+
+    
+    <h4 class="ng-text-edit-s">Last Updated</h4>
+    <p>May 18, 2018</p>
+
+                </div>
+              </li>
+            
+
+            
+                <li>
+                  <a name="rights-panel" href="#" class="ng-accordion-title ng-display-inline-block ng-width-1-1 ng-margin-bottom">
+                    User Permissions
+                  </a>
+
+                <div class="ng-accordion-content" id="rights-panel">
+                    
+    <p>For information on user permissions, please read our <a href="/terms-of-service/" target="_blank" rel="noopener noreferrer" title="terms of service">Terms of Service</a>. If you have questions about licensing content on this page, please contact <a href="mailto:ngimagecollection@natgeo.com">ngimagecollection@natgeo.com</a> for more information and to obtain a license. If you have questions about how to cite anything on our website in your project or classroom presentation, please visit our <a href="/faq/">FAQ page</a>.
+    </p>
+    <h4 class="ng-text-edit-s">Media</h4>
+    <p>If a media asset is downloadable, a download button appears in the corner of the media viewer. If no button appears, you cannot download or save the media.</p>
+    <h4 class="ng-text-edit-s">Text</h4>
+    <p>Text on this page is printable and can be used according to our <a href="/terms-of-service/" target="_blank" rel="noopener noreferrer" title="Terms of Service">Terms of Service</a>.
+    </p>
+    <h4 class="ng-text-edit-s">Interactives</h4>
+    <p>Any interactives on this page can only be played while you are visiting our website. You cannot download interactives.
+    </p>
+
+                    
+                </div>
+                </li>
+            
+            </ul>
+
+          </section>
+        
+
+        
+    
+    
+
+
+
+
+        
+      </article>
+
+      
+          
+          <!-- DESKTOP LAYOUT -->
+          <div class="ng-related-resources-container-desktop ng-visible-medium-large ng-hidden-small-mini collapsed ng-width-1-1 ng-padding-remove">
+            
+
+
+
+<div class="ng-heading ng-width-small-5-6 ng-container-center ng-text-center ng-margin-large-top ng-margin-bottom related-resources-header-desktop" >
+  <h5>Related Resources</h5>
+</div>
+
+
+            <ul id="165_desk" class="ng-width-1-1 ng-flex ng-padding-remove ng-flex-wrap ng-flex-item-auto">
+              
+
+
+
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-climate-change/" title="Climate Change" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/131/220/62b81c40-e3a0-405a-881d-42c4c39d7dd2_c26-0-1974-1333_r380x260.jpg?14472115b1f7420bf3b3c9d9ae1136f86b06e433" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-climate-change/" title="Climate Change" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Climate Change
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="1a03ed30-14b3-4d79-90d3-2b42eb3b161f" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-1a03ed30-14b3-4d79-90d3-2b42eb3b161f">
+</div>
+
+      <p class="card-description">Global temperatures and sea levels are rising, and possibly contributing to larger more devastating storms. This&nbsp;can all&nbsp;be contributed to climate change. Climate change is defined as gradual changes in all the interconnected weather elements on our planet over approximately 30 years. The data shows the Earth is warming and it&#39;s up to us to make the changes necessary for a healthier planet.
+
+Use these resources in your classroom to help your students understand and take action on&nbsp;climate change.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-climate-change/" title="Climate Change" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-regional-climate/" title="Regional Climate" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/211/619/9f3459ca-bacd-4c3c-b47a-640279e576b3_c15-0-1184-800_r380x260.jpg?85ccd21e8ab2e480f59e16e47542117acd3a6d40" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-regional-climate/" title="Regional Climate" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Regional Climate
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="7b1774e3-573b-451e-baa3-10c82a0eddd6" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-7b1774e3-573b-451e-baa3-10c82a0eddd6">
+</div>
+
+      <p class="card-description">The weather you encounter day to day depends on where you live. Places around the Equator experience warm weather all year round, but experience alternate periods of rainy and dry seasons. Places near lakes may experience more snow in the winter, whereas places on continental plains may be more prone to hail, thunderstorms, and tornados in the summer. The different kinds of weather you might experience in these regions are caused by moving patterns in the Earth&rsquo;s atmospheric and oceanic circulation, unequal heating of the Earth, and the rotation of the Earth on its tilted axis.
+
+Learn more about regional climates with this curated resource collection.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-regional-climate/" title="Regional Climate" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-climate/" title="Climate" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/000/269/26929_c0-33-990-710_r380x260.jpg?a4634f83764a0027786d006d630ddd9181e4bc5c" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-climate/" title="Climate" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Climate
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="218297f1-fcfa-4442-8387-e6b7f2bbf107" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-218297f1-fcfa-4442-8387-e6b7f2bbf107">
+</div>
+
+      <p class="card-description">&nbsp;
+
+Climate describes the average weather conditions of a particular place over a 30 year period . All places on earth have their own climates. Some climates are small in scale, like the climate of a local region or the microclimates within an ecosystem, and some are much larger, such as the climates of entire continents, or the world&rsquo;s oceans. Different from weather events, which are short-term and temporary phenomenon, climates are usually steady and predictable, and shape how organisms and human civilizations evolve and adapt in any given region. However, climates are not always permanent, and can change drastically due to human activity.
+
+Explore the world&#39;s climates and how they affect local regions and the planet with this curated collection of resources.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-climate/" title="Climate" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-atmosphere/" title="Atmosphere" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/000/313/31376_c0-0-743-508_r380x260.jpg?2cb2dd0f56d86bfe28104ddf1ea368ebf200a250" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-atmosphere/" title="Atmosphere" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Atmosphere
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="8b8b952b-9d4c-40c4-878a-abcf2a564cc1" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-8b8b952b-9d4c-40c4-878a-abcf2a564cc1">
+</div>
+
+      <p class="card-description">One of the main components of Earth&rsquo;s interdependent physical systems is the atmosphere. An atmosphere is the layers of gases surrounding a planet or other celestial body. Earth&rsquo;s atmosphere is composed of about 78% nitrogen, 21% oxygen, and one percent other gases. These gases are found in layers (troposphere, stratosphere, mesosphere, thermosphere, and exosphere) defined by unique features such as temperature and pressure. The atmosphere protects life on earth by shielding it from incoming ultraviolet (UV) radiation, keeping the planet warm through insulation, and preventing extremes between day and night temperatures. The sun heats layers of the atmosphere causing it to convect driving air movement and weather patterns around the world.
+
+Teach your students about the Earth&#39;s atmosphere with the resources in this collection.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-atmosphere/" title="Atmosphere" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="bibblio" data-ng-ctype="Article">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/280/28044_c0-33-990-710_r380x260.jpg?a4634f83764a0027786d006d630ddd9181e4bc5c" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="bib__link"
+        data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Greenhouse Effect
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="e639bf84-d9ad-4484-ae41-631b2c380aa5" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-e639bf84-d9ad-4484-ae41-631b2c380aa5">
+</div>
+
+      <p class="card-description">Global warming describes the current rise in the average temperature of Earth&rsquo;s air and oceans. Global warming is often described as the most recent example of climate change.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+            View  Article
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="bibblio" data-ng-ctype="Video">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/325/32519_c171-0-1749-1080_r380x260.jpg?e10ef58d06feb67e7aafd75b74072a1133c26cd3" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="bib__link"
+        data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Greenhouse Gases: Good or Bad?
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="bdb110f9-719f-4704-abfe-29beacd259b9" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-bdb110f9-719f-4704-abfe-29beacd259b9">
+</div>
+
+      <p class="card-description">Watch this brief, video picture of practice that captures everyday classroom life and provides real-life examples of how students learn and think about climate change topics.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+            View  Video
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding "
+    data-ng-cardtype="bibblio" data-ng-ctype="Historic Article">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/273/27373_c0-32-990-709_r380x260.jpg?b579bfd86dc3f54a56845f22b25fec93319420d2" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="bib__link"
+        data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Part of Wilkins Ice Shelf Collapses
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="f0d3bae1-8c34-4805-9998-27e3e02bc20d" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-f0d3bae1-8c34-4805-9998-27e3e02bc20d">
+</div>
+
+      <p class="card-description">On March 25, 2008, scientists announced that a large piece of the Wilkins Ice Shelf in Antarctica had collapsed.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+            View  Historic Article
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+
+
+
+            </ul>
+            
+              <div class="ng-flex ng-flex-center view-more-resources-btn ng-visible-medium-large ng-hidden-small-mini">
+  <div class="ng-width-small-1-1 ng-width-large-1-3 ng-padding">
+      <a class="ng-button ng-width-1-1 ng-button-overlay" onclick="document.querySelector('.ng-related-resources-container-desktop').classList.remove('collapsed'); document.querySelector('.view-more-resources-btn').classList.add('ng-hidden');">
+        View More Resources
+      </a>
+  </div>
+</div>
+
+            
+          </div>
+
+          <!-- MOBILE LAYOUT -->
+          <div class="ng-related-resources-container-mobile ng-visible-small-mini ng-hidden-medium-large ng-width-1-1" data-ng-slider="{infinite:false, center: true}">
+            
+
+
+
+<div class="ng-heading ng-width-small-5-6 ng-container-center ng-text-center ng-margin-large-top ng-margin-bottom related-resources-header-mobile" >
+  <h5>Related Resources</h5>
+</div>
+
+
+            <ul id="165_mob" class="ng-slider ng-flex ng-padding-remove ng-width-1-1">
+              
+
+
+
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-climate-change/" title="Climate Change" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/131/220/62b81c40-e3a0-405a-881d-42c4c39d7dd2_c26-0-1974-1333_r380x260.jpg?14472115b1f7420bf3b3c9d9ae1136f86b06e433" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-climate-change/" title="Climate Change" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Climate Change
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="1a03ed30-14b3-4d79-90d3-2b42eb3b161f" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-1a03ed30-14b3-4d79-90d3-2b42eb3b161f">
+</div>
+
+      <p class="card-description">Global temperatures and sea levels are rising, and possibly contributing to larger more devastating storms. This&nbsp;can all&nbsp;be contributed to climate change. Climate change is defined as gradual changes in all the interconnected weather elements on our planet over approximately 30 years. The data shows the Earth is warming and it&#39;s up to us to make the changes necessary for a healthier planet.
+
+Use these resources in your classroom to help your students understand and take action on&nbsp;climate change.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-climate-change/" title="Climate Change" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-regional-climate/" title="Regional Climate" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/211/619/9f3459ca-bacd-4c3c-b47a-640279e576b3_c15-0-1184-800_r380x260.jpg?85ccd21e8ab2e480f59e16e47542117acd3a6d40" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-regional-climate/" title="Regional Climate" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Regional Climate
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="7b1774e3-573b-451e-baa3-10c82a0eddd6" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-7b1774e3-573b-451e-baa3-10c82a0eddd6">
+</div>
+
+      <p class="card-description">The weather you encounter day to day depends on where you live. Places around the Equator experience warm weather all year round, but experience alternate periods of rainy and dry seasons. Places near lakes may experience more snow in the winter, whereas places on continental plains may be more prone to hail, thunderstorms, and tornados in the summer. The different kinds of weather you might experience in these regions are caused by moving patterns in the Earth&rsquo;s atmospheric and oceanic circulation, unequal heating of the Earth, and the rotation of the Earth on its tilted axis.
+
+Learn more about regional climates with this curated resource collection.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-regional-climate/" title="Regional Climate" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-climate/" title="Climate" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/000/269/26929_c0-33-990-710_r380x260.jpg?a4634f83764a0027786d006d630ddd9181e4bc5c" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-climate/" title="Climate" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Climate
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="218297f1-fcfa-4442-8387-e6b7f2bbf107" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-218297f1-fcfa-4442-8387-e6b7f2bbf107">
+</div>
+
+      <p class="card-description">&nbsp;
+
+Climate describes the average weather conditions of a particular place over a 30 year period . All places on earth have their own climates. Some climates are small in scale, like the climate of a local region or the microclimates within an ecosystem, and some are much larger, such as the climates of entire continents, or the world&rsquo;s oceans. Different from weather events, which are short-term and temporary phenomenon, climates are usually steady and predictable, and shape how organisms and human civilizations evolve and adapt in any given region. However, climates are not always permanent, and can change drastically due to human activity.
+
+Explore the world&#39;s climates and how they affect local regions and the planet with this curated collection of resources.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-climate/" title="Climate" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="collection" data-ng-ctype="Collection">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-dkgray ng-color-white ">
+    <a href="/topics/resource-library-atmosphere/" title="Atmosphere" class="ng-thumbnail ng-bordered ng-width-1-1 "
+      >
+      <img src="https://media.nationalgeographic.org/assets/photos/000/313/31376_c0-0-743-508_r380x260.jpg?2cb2dd0f56d86bfe28104ddf1ea368ebf200a250" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/topics/resource-library-atmosphere/" title="Atmosphere" 
+        >
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title  ng-color-white ">
+          Atmosphere
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="8b8b952b-9d4c-40c4-878a-abcf2a564cc1" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-8b8b952b-9d4c-40c4-878a-abcf2a564cc1">
+</div>
+
+      <p class="card-description">One of the main components of Earth&rsquo;s interdependent physical systems is the atmosphere. An atmosphere is the layers of gases surrounding a planet or other celestial body. Earth&rsquo;s atmosphere is composed of about 78% nitrogen, 21% oxygen, and one percent other gases. These gases are found in layers (troposphere, stratosphere, mesosphere, thermosphere, and exosphere) defined by unique features such as temperature and pressure. The atmosphere protects life on earth by shielding it from incoming ultraviolet (UV) radiation, keeping the planet warm through insulation, and preventing extremes between day and night temperatures. The sun heats layers of the atmosphere causing it to convect driving air movement and weather patterns around the world.
+
+Teach your students about the Earth&#39;s atmosphere with the resources in this collection.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/topics/resource-library-atmosphere/" title="Atmosphere" class="ng-button ng-button-small "
+            >
+            View  Collection
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="bibblio" data-ng-ctype="Article">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/280/28044_c0-33-990-710_r380x260.jpg?a4634f83764a0027786d006d630ddd9181e4bc5c" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="bib__link"
+        data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Greenhouse Effect
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="e639bf84-d9ad-4484-ae41-631b2c380aa5" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-e639bf84-d9ad-4484-ae41-631b2c380aa5">
+</div>
+
+      <p class="card-description">Global warming describes the current rise in the average temperature of Earth&rsquo;s air and oceans. Global warming is often described as the most recent example of climate change.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/encyclopedia/greenhouse-effect/?utm_source=BibblioRCM_Row" title="Greenhouse Effect" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="97d27b7f-1f96-43ac-9bdd-a0b56da626d6">
+            View  Article
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="bibblio" data-ng-ctype="Video">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/325/32519_c171-0-1749-1080_r380x260.jpg?e10ef58d06feb67e7aafd75b74072a1133c26cd3" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="bib__link"
+        data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Greenhouse Gases: Good or Bad?
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="bdb110f9-719f-4704-abfe-29beacd259b9" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-bdb110f9-719f-4704-abfe-29beacd259b9">
+</div>
+
+      <p class="card-description">Watch this brief, video picture of practice that captures everyday classroom life and provides real-life examples of how students learn and think about climate change topics.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/media/greenhouse-gases-good-or-bad/?utm_source=BibblioRCM_Row" title="Greenhouse Gases: Good or Bad?" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="768435fe-cbef-4018-93a1-ea60fa90c2b4">
+            View  Video
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+  
+  
+  
+  
+    
+
+<li class="related-resource-card ng-width-small-9-10 ng-width-medium-1-3 ng-width-large-1-3 ng-padding ng-padding-small-horizontal ng-width-9-10"
+    data-ng-cardtype="bibblio" data-ng-ctype="Historic Article">
+  <div class="ng-box-shadow ng-margin-small-bottom  ng-background-white ng-color-black ">
+    <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="ng-thumbnail ng-bordered ng-width-1-1 bib__link"
+      data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+      <img src="https://media.nationalgeographic.org/assets/photos/000/273/27373_c0-32-990-709_r380x260.jpg?b579bfd86dc3f54a56845f22b25fec93319420d2" class="ng-width-1-1">
+    </a>
+    <div class="card-content ng-padding-medium">
+      <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="bib__link"
+        data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+        <h6 class="ng-promo-title-large capitalize ng-margin-medium-bottom card-title ">
+          Part of Wilkins Ice Shelf Collapses
+        </h6>
+      </a>
+
+      
+
+
+<button ng-bookmark="f0d3bae1-8c34-4805-9998-27e3e02bc20d" type="button" class="ng-icon-button ng-icon-bookmark ng-bookmark-btn ng-padding-remove ng-hidden related-resource-bookmark-btn"></button>
+
+<div ng-drop="mode: hover,click; pos: left-center; offset: 15; animation: ng-fade-right; delay-hide: 10;" class="ng-drop related-resource-bookmark-drop" id="drop-bookmark-f0d3bae1-8c34-4805-9998-27e3e02bc20d">
+</div>
+
+      <p class="card-description">On March 25, 2008, scientists announced that a large piece of the Wilkins Ice Shelf in Antarctica had collapsed.</p>
+      <div class="card-button ng-flex ng-flex-column ng-margin-large-top">
+          <a href="/thisday/mar25/part-wilkins-ice-shelf-collapses/?utm_source=BibblioRCM_Row" title="Part of Wilkins Ice Shelf Collapses" class="ng-button ng-button-small bib__link"
+            data-ng-contentitemid="d311b218-4838-45c0-aae6-17fb88a90d10">
+            View  Historic Article
+          </a>
+      </div>
+    </div>
+  </div>
+</li>
+
+  
+
+
+
+
+            </ul>
+          </div>
+
+          <!-- INIT BIBBLIO ACTIVITY TRACKING -->
+          
+            
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+          
+      
+
+      
+
+
+
+<div id="search-module-01" class="search-module ng-center q-search-resources  ng-width-1-1  ng-padding-remove"></div>
+
+
+
+
+
+
+
+
+    </div>
+   
+
+
+
+
+  
+    </div>
+
+  
+
+
+
+
+<footer id="main-footer">
+    
+    <div id="modal-container">
+        <div id="modal-iframe-container">
+            <iframe frameborder="0" id="modal-iframe"></iframe>
+            <button id="modal-close-btn">X</button>
+        </div>
+    </div>
+    
+    <div class="ng-c-footer-container ng-padding-medium-vertical">
+        <div class="ng-padding-large-horizontal ng-padding-large-vertical">
+            <div class="ng-grid ng-flex ng-flex-wrap">
+                <!-- Upper Left side of footer -->
+                <div class="ng-width-medium-1-4 ng-padding-small-right">
+                    <div class="ng-c-footer-logo ng-margin-medium-bottom">
+                        <a href="/" class="ngg-link-unstyled">
+                            <img src="/static/images/logos/nglogo-stacked-white.min.6f3b65fe2af6.svg" style="width: 180px;" />
+                        </a>
+                    </div>
+                    <div class="ng-c-footer-address ng-margin-medium-bottom">
+                        <p class="ng-edit-light ng-color-white">
+                          National Geographic Headquarters<br/>
+                          1145 17th Street NW<br/>
+                          Washington, DC 20036
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Upper Right Side of Footer -->
+                <div class="ng-width-medium-1-2">
+                    <div class="ng-grid">
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">ABOUT</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/about-us/" class="ng-border-remove ng-color-white ng-edit-light">National Geographic Society</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="https://www.nationalgeographicpartners.com/about/" class="ng-border-remove ng-color-white ng-edit-light">National Geographic Partners</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="//blog.nationalgeographic.org/" class="ng-border-remove ng-color-white ng-edit-light">News and Impact</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/support/" class="ng-border-remove ng-color-white ng-edit-light">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">EXPLORE</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/find-explorers/" class="ng-border-remove ng-color-white ng-edit-light">Our Explorers</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/projects/" class="ng-border-remove ng-color-white ng-edit-light">Our Projects</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/education/" class="ng-border-remove ng-color-white ng-edit-light">Resources for Educators</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/events/" class="ng-border-remove ng-color-white ng-edit-light">Museum and Events</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/labs/" class="ng-border-remove ng-color-white ng-edit-light">Technology and Innovation</a></li>
+                            </ul>
+                        </div>
+                        <div class="ng-width-medium-1-3 ng-margin-medium-bottom ng-c-footer-address">
+                            <h6 class="ng-color-mdgray ng-margin-bottom">JOIN US</h6>
+                            <ul class="ng-list ng-padding-remove">
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/give/" class="ng-border-remove ng-color-white ng-edit-light">Ways to Give</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="/funding-opportunities/grants/" class="ng-border-remove ng-color-white ng-edit-light">Apply for a Grant</a></li>
+                                <li class="ng-margin-small-bottom ng-padding-small-bottom"><a href="https://www.nationalgeographicpartners.com/careers/" class="ng-border-remove ng-color-white ng-edit-light">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-4 ng-text-center">
+                    <div class="ng-align-medium-right ng-text-center ng-c-footer-buttons">
+                        <a href="https://give.nationalgeographic.org/page/49060/donate/1" target="_blank" role="button" class="ng-button ng-button-large ng-button-primary ng-margin-medium-bottom donate-btn">Donate</a>
+                        <a href="https://give.nationalgeographic.org/page/49156/subscribe/1" target="_blank" role="button" class="ng-button ng-button-large get-updates-btn newsletter-btn">Get Updates</a>
+                    </div>
+                </div>
+
+                <!-- Lower Left Side of Footer -->
+                <div class="ng-width-medium-1-4">
+                    <div class="ng-c-footer-social-module">
+                        <h6 class="ng-color-white ng-padding-medium-top ng-margin-medium-bottom">Connect</h6>
+                        <div>
+                            <a href="https://www.facebook.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-facebook ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://twitter.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-twitter ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.instagram.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-instagram ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.youtube.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-youtube ng-margin-medium-right ng-color-white" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="ng-c-footer-social-module-mobile ng-text-center ng-margin-medium-top">
+                        <h6 class="ng-color-white ng-margin-bottom">Connect</h6>
+                        <div>
+                            <a href="https://www.facebook.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-facebook ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://twitter.com/InsideNatGeo/" class="ng-icon-small ng-icon-hover ng-icon-twitter ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.instagram.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-instagram ng-margin-medium-right ng-color-white" target="_blank"></a>
+                            <a href="https://www.youtube.com/insidenatgeo/" class="ng-icon-small ng-icon-hover ng-icon-youtube ng-margin-medium-right ng-color-white" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lower Right Side of Footer -->
+                <div class="ng-width-medium-3-4">
+                    <div class="ng-margin-medium-top">
+                        <p class="ng-c-footer-info ng-color-mdgray ng-edit-light ">National Geographic Society is a 501 (c)(3) organization. © 1996 - 2019 National Geographic Society. All rights reserved.<br />
+                        <a href="/privacy-notice/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Privacy Notice</span></a>&nbsp;|&nbsp;
+                        <a href="/sustainability-policy/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Sustainability Policy</span></a>&nbsp;|&nbsp;
+                        <a href="/terms-of-service/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Terms of Service</span></a>&nbsp;|&nbsp;
+                        <a href="/ethics/" class="ng-border-remove ng-edit-light"><span class="ng-color-mdgray">Code of Ethics</span></a></p>
+                    </div>
+                </div>
+            </div> <!-- outermost ng-grid -->
+        </div>
+    </div> <!-- ng-c-footer-container -->
+</footer>
+
+  
+
+
+  <script type="text/javascript" src="/static/ngs_commons/js/donate_updates_modals.0f81169a5862.js"></script>
+
+
+  
+
+<div id="cookie-banner-container">
+  <iframe id="cookie-banner-iframe" src="//www.nationalgeographic.org/ngs-commons/cookie-banner/"></iframe>
+</div>
+
+<link rel="stylesheet" href="/static/ngs_commons/css/cookie_banner_container.d8880afb3f0a.css"/>
+
+
+  <script>window._cookieMgmtNS = JSON.parse('{\u0022cookieBannerHost\u0022: \u0022//www.nationalgeographic.org\u0022, \u0022geoIPUrl\u0022: \u0022//www.nationalgeographic.org/ngs\u002Dcommons/api/geoip\u0022}');</script>
+
+
+<script type="text/javascript" src="/static/ngs_commons/js/cookie_management.ba2a0f77b208.js"></script>
+<script type="text/javascript" src="/static/ngs_commons/js/cookie_banner_container.51fbe6fa3580.js"></script>
+
+
+
+
+
+
+    
+    
+    <script type="text/javascript" src="https://s7.addthis.com/jsbase/300/addthis_widget.js#async=1"></script>
+    <script type="text/javascript" src="/static/ngs/js/splitio.0d50d765256f.js"></script>
+
+    <script type="text/javascript" src="/static/CACHE/js/output.b4dcec69420e.js"></script>
+
+    <script type="text/javascript">;var staticURL='/static/';$(document).ready(function(){var cookieConsent=cookieMgmtNS.getCookie('cookie-consent')==='true';var modal_triggers=$('a[href^="#modal-"]');modal_triggers.attr('data-ng-modal',function(i,val){if(val)return val;var trigger=$(modal_triggers[i]).attr('href');return'{target:"'+trigger+'"}';});var addthis_config={pubid:"ra-59a7c526c7f290d3",data_ga_property:"UA-3104240-2",ui_header_color:"#000000",ui_header_background:"#ffffff",ui_508_compliant:true,ui_click:true,data_ga_social:cookieConsent,data_track_clickback:cookieConsent,data_use_cookies:cookieConsent,data_ga_social:true,services_exclude:"print, email",services_compact:"facebook,stumbleupon,digg,reddit,delicious,twitter,digo,linkedin,pinterest"};if(typeof(addthis)!=="undefined")
+addthis.init();$.getJSON("/messages/",function(data){toastr.options={"closeButton":true,"debug":true,"positionClass":"toast-center","onclick":null,"showDuration":0,"hideDuration":1000,"timeOut":0,"extendedTimeOut":1000,"showEasing":"swing","hideEasing":"linear","showMethod":"fadeIn","hideMethod":"fadeOut"};var template_front='<div class="ng-alert ng-alert-warning ng-border-remove  ng-margin-top" data-ng-alert=""><a href="" class="ng-alert-close ng-close"></a><p>',template_back='</p></div>';$.each(data,function(index,value){if(value.type==='top-banner'){$('#bodyalert').html(template_front+value.message+template_back);}else if(value.type==='javascript'){var div=$('<div id="broadcast-js-container"></div>');div.html(value.message)
+div.css("display","none");$(document.body).append(div);$(div).trigger("displayBroadcastMessage");}else{toastr.info(value.message);}});});});</script>
+
+
+    
+
+    <script type="text/html" id="relatedmaterialstemplate">
+        
+        {{~results}}
+        <div class="ng-media">
+            <a href="{{$item.fields.url}}" class="ng-media-img"><img class="left" src="{{$item.fields.thumbnailUrl}}" width="65" alt="{{$item.fields.name}}" title="{{$item.fields.name}}"></a>
+            <div class="ng-media-body">
+                <h5 class="ng-margin-bottom-remove"><a href="{{$item.fields.url}}">{{$item.fields.name}}</a></h5>
+            </div>
+        </div>
+        {{/results}}
+        
+    </script>
+
+
+    
+      
+      <!--INIT RC only if there are items-->
+      
+        <script type="text/javascript" src="/static/resource-carousel/index.min.57af539e4b4a.js" defer></script>
+
+        
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', function (_event) {
+            function fetchItems() {
+              return fetch("/api/rc/article/165/").then(function(response) {
+                return response.json();
+              }).catch(function(e) {
+                console.error("Error while making the API call. Please refresh your browser and try again.", e)
+              });
+            }
+            var itemSlug = window.location.hash.replace('#', '');
+            ResourceCarousel.run(document.getElementById('rc-content'), {
+              fetch: fetchItems, options: {initialItemSlug: itemSlug}
+            });
+          });
+      </script>
+    
+  
+  <script type="text/javascript" src="/static/ngs/bookmark/js/BookmarkAPIClient.3672cd6e3928.js"></script>
+  <script type="text/javascript" src="/static/ngs/bookmark/js/Bookmark.de1963d05294.js"></script>
+  <script type="text/javascript" src="/static/ngs/bookmark/js/Bookmarks.4bae1af6a71f.js"></script>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function (_event) {
+      // Glossary
+      var vocabulary = vocabulary || {};
+      $.NGkit.definition.initialize({source: vocabulary, selector:".tipHelp"});
+
+      //init Bookmark buttons
+      var UserBookmarks = new Bookmarks({
+        isAuthenticated: false,
+        apiUrl: '/api/bookmarks/',
+        libraryUrl: '/education/resource-library/',
+        loginUrl: '/auth/login/saml?idp=auth0&amp;connection=SF-IDM' + ('/auth/login/saml?idp=auth0&amp;connection=SF-IDM'.match(/\?/) ? '&' : '?') + 'next=' + window.location.pathname,
+      })
+      UserBookmarks.init();
+
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+<script src="/static/js/navigation/header_nav.50f5458f2b64.js"></script>
+<script src="/static/js/tessitura/cart.863ff83207ee.js"></script>
+
+
+  <script type="text/javascript" src="/static/js/bibblio/bib-init-tracking.d6349702273c.js"></script>
+  <script>
+    Bibblio.initTracking({
+        targetElement: document.getElementById("165_desk"),
+      },
+      {"_links": {"sourceContentItem": {"href": "https://api.bibblio.org/v1/content-items/9fc1d33d-ba82-4177-ad7a-932e95df313e", "id": "9fc1d33d-ba82-4177-ad7a-932e95df313e"}, "tracking": {"href": "https://api.bibblio.org/v1/activities/9bc444b0-16a4-4d86-ab6a-d38a413d12be"}}, "results": [{"relevance": 0.7602900266647339, "relationships": {"inCommon": []}, "contentItemId": "97d27b7f-1f96-43ac-9bdd-a0b56da626d6", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}, {"relevance": 0.6245170831680298, "relationships": {"inCommon": []}, "contentItemId": "768435fe-cbef-4018-93a1-ea60fa90c2b4", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}, {"relevance": 0.5819782018661499, "relationships": {"inCommon": []}, "contentItemId": "d311b218-4838-45c0-aae6-17fb88a90d10", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}]});
+  </script>
+
+
+  <script type="text/javascript" src="/static/js/bibblio/bib-init-tracking.d6349702273c.js"></script>
+  <script>
+    Bibblio.initTracking({
+        targetElement: document.getElementById("165_mob"),
+      },
+      {"_links": {"sourceContentItem": {"href": "https://api.bibblio.org/v1/content-items/9fc1d33d-ba82-4177-ad7a-932e95df313e", "id": "9fc1d33d-ba82-4177-ad7a-932e95df313e"}, "tracking": {"href": "https://api.bibblio.org/v1/activities/9bc444b0-16a4-4d86-ab6a-d38a413d12be"}}, "results": [{"relevance": 0.7602900266647339, "relationships": {"inCommon": []}, "contentItemId": "97d27b7f-1f96-43ac-9bdd-a0b56da626d6", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}, {"relevance": 0.6245170831680298, "relationships": {"inCommon": []}, "contentItemId": "768435fe-cbef-4018-93a1-ea60fa90c2b4", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}, {"relevance": 0.5819782018661499, "relationships": {"inCommon": []}, "contentItemId": "d311b218-4838-45c0-aae6-17fb88a90d10", "fields": {}, "catalogueId": "db4e4cea-79ae-4a0d-be07-3016028001de"}]});
+  </script>
+
+
+<script type="text/javascript" src="/static/react/react.production.min.c485b1a84875.js"></script>
+<script type="text/javascript" src="/static/react-dom/react-dom.production.min.7fee5629ef16.js"></script>
+<script type="text/javascript" src="/static/ngs-react/index.min.fea650744596.js"></script>
+
+
+  <script type="text/javascript" src="/static/ngs/asset-library/js/util/polyfills.7efb220f1507.js"></script>
+  <script type="text/javascript" src="/static/ngs/asset-library/js/index.dce205dc5884.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function (_event) {
+      initSearchModule({
+        placeholder: 'Explore all',
+        heading: 'Search the resource library',
+        headingClass: 'ng-text-display-m ng-margin-large-bottom',
+        filters: [{"options": [{"text": "Activity", "key": "Activity", "value": "Activity", "children": null}, {"text": "Article", "key": "Article", "value": "Article", "children": [{"text": "Leveled Article", "key": "Article:leveled", "value": "Article:leveled", "children": null}]}, {"text": "Collection", "key": "Collection", "value": "Collection", "children": null}, {"text": "Infographic", "key": "Infographic", "value": "Infographic", "children": null}, {"text": "Lesson", "key": "Lesson", "value": "Lesson", "children": null}, {"text": "Map", "key": "Map", "value": "Map", "children": null}, {"text": "Photograph", "key": "Photograph", "value": "Photograph", "children": null}, {"text": "Unit", "key": "Unit", "value": "Unit", "children": null}, {"text": "Video", "key": "Video", "value": "Video", "children": null}], "placeholder": "resources", "name": "content_type_category", "label": "Content Types"}, {"options": [{"text": "Pre-K", "key": "Pre-K", "value": "Pre-K", "children": null}, {"text": "K", "key": "K", "value": "K", "children": null}, {"text": "1", "key": "1", "value": "1", "children": null}, {"text": "2", "key": "2", "value": "2", "children": null}, {"text": "3", "key": "3", "value": "3", "children": null}, {"text": "4", "key": "4", "value": "4", "children": null}, {"text": "5", "key": "5", "value": "5", "children": null}, {"text": "6", "key": "6", "value": "6", "children": null}, {"text": "7", "key": "7", "value": "7", "children": null}, {"text": "8", "key": "8", "value": "8", "children": null}, {"text": "9", "key": "9", "value": "9", "children": null}, {"text": "10", "key": "10", "value": "10", "children": null}, {"text": "11", "key": "11", "value": "11", "children": null}, {"text": "12+", "key": "12", "value": "12", "children": null}], "placeholder": "for all grades", "name": "grades", "label": "Grades"}, {"options": [{"text": "Geography", "key": "Geography", "value": "Geography", "children": [{"text": "Physical Geography", "key": "Physical Geography", "value": "Physical Geography", "children": null}, {"text": "Human Geography", "key": "Human Geography", "value": "Human Geography", "children": null}, {"text": "Geographic Information Systems (GIS)", "key": "Geographic Information Systems (GIS)", "value": "Geographic Information Systems (GIS)", "children": null}]}, {"text": "Earth Science", "key": "Earth Science", "value": "Earth Science", "children": [{"text": "Geology", "key": "Geology", "value": "Geology", "children": null}, {"text": "Oceanography", "key": "Oceanography", "value": "Oceanography", "children": null}, {"text": "Astronomy", "key": "Astronomy", "value": "Astronomy", "children": null}, {"text": "Meteorology", "key": "Meteorology", "value": "Meteorology", "children": null}, {"text": "Climatology", "key": "Climatology", "value": "Climatology", "children": null}]}, {"text": "Social Studies", "key": "Social Studies", "value": "Social Studies", "children": [{"text": "World History", "key": "World History", "value": "World History", "children": null}, {"text": "U.S. History", "key": "U.S. History", "value": "U.S. History", "children": null}, {"text": "Civics", "key": "Civics", "value": "Civics", "children": null}, {"text": "Economics", "key": "Economics", "value": "Economics", "children": null}, {"text": "Ancient Civilizations", "key": "Ancient Civilizations", "value": "Ancient Civilizations", "children": null}]}, {"text": "Biology", "key": "Biology", "value": "Biology", "children": [{"text": "Ecology", "key": "Ecology", "value": "Ecology", "children": null}, {"text": "Health", "key": "Health", "value": "Health", "children": null}, {"text": "Genetics", "key": "Genetics", "value": "Genetics", "children": null}]}, {"text": "Arts and Music", "key": "Arts and Music", "value": "Arts and Music", "children": []}, {"text": "Anthropology", "key": "Anthropology", "value": "Anthropology", "children": [{"text": "Archaeology", "key": "Archaeology", "value": "Archaeology", "children": null}, {"text": "Sociology", "key": "Sociology", "value": "Sociology", "children": null}]}, {"text": "Engineering", "key": "Engineering", "value": "Engineering", "children": []}, {"text": "Experiential Learning", "key": "Experiential Learning", "value": "Experiential Learning", "children": []}, {"text": "English Language Arts", "key": "English Language Arts", "value": "English Language Arts", "children": []}, {"text": "Conservation", "key": "Conservation", "value": "Conservation", "children": []}, {"text": "Physics", "key": "Physics", "value": "Physics", "children": []}, {"text": "Religion", "key": "Religion", "value": "Religion", "children": []}, {"text": "Mathematics", "key": "Mathematics", "value": "Mathematics", "children": []}, {"text": "Storytelling", "key": "Storytelling", "value": "Storytelling", "children": [{"text": "Photography", "key": "Photography", "value": "Photography", "children": null}, {"text": "Filmmaking", "key": "Filmmaking", "value": "Filmmaking", "children": null}]}, {"text": "Chemistry", "key": "Chemistry", "value": "Chemistry", "children": []}, {"text": "Professional Learning", "key": "Professional Learning", "value": "Professional Learning", "children": []}, {"text": "English as a Second Language", "key": "English as a Second Language", "value": "English as a Second Language", "children": []}], "placeholder": "in any subject", "name": "subjects", "label": "Subjects"}],
+        autoFocus: false,
+        apiUrl: '/api/search/reslib/',
+        resourceLibraryUrl: '/education/resource-library/',
+        targetElement: document.getElementById('search-module-01')
+      })
+    });
+  </script>
+
+
+
+
+
+
+<link href='/static/aos/aos.847da8fca806.css' rel="stylesheet">
+
+<script src='/static/aos/aos.d3718e34eeb0.js'></script>
+ 
+</body>
+</html>
