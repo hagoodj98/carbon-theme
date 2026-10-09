@@ -65,18 +65,16 @@
   padding: 20px;
   display: none;
 }
-.footprint {
-  &:hover {
-    cursor: pointer;
-    .countrytextblock {
-      display: block;
-    }
-  }
-}
-.textblock {
-  border: 1px solid white;
-  height: 100px;
+
+#textblock {
   width: 100%;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.country-text {
+  padding: 10px;
 }
 
 #footprint0,
@@ -85,6 +83,11 @@
 #footprint3,
 #footprint4 {
   position: absolute;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
 }
 #footprint0 {
   top: 16.746%;
