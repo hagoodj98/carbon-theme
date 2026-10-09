@@ -169,7 +169,7 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-  background-color: #36454F;
+  background-color: #36454f;
   color: white;
 }
 
@@ -235,7 +235,7 @@ header .navbar ul li:hover > ul {
     background-color: white;
   }
   header .navbar ul li ul li a {
-    background-color: #36454F;
+    background-color: #36454f;
     color: white;
     font-size: 15px;
   }
@@ -537,18 +537,24 @@ p {
 
 .wrapstorytextbodyright section {
   color: white;
-  background-color: #36454F;
+  background-color: #36454f;
 }
 
 .wrapstorytextbodyright section section {
   background-color: white;
 }
 
-#myDIV h2, #myDIV6 h2, #myDIV5 h2, #myDIV2 h2 {
+#myDIV h2,
+#myDIV6 h2,
+#myDIV5 h2,
+#myDIV2 h2 {
   display: none;
 }
 
-#myDIV p, #myDIV2 p, #myDIV5 p, #myDIV6 p {
+#myDIV p,
+#myDIV2 p,
+#myDIV5 p,
+#myDIV6 p {
   display: none;
 }
 
@@ -601,7 +607,7 @@ p {
 }
 
 .sectionheaders {
-  background-color: #36454F;
+  background-color: #36454f;
   font-weight: bolder;
   color: white;
   padding: 60px;
@@ -654,13 +660,17 @@ aside {
   margin: auto;
 }
 
+.world-section img {
+  display: none;
+}
+
 aside p {
   font-size: 17px;
   font-style: italic;
 }
 
 .allwhite {
-  background-color: #04AA6D;
+  background-color: #04aa6d;
 }
 
 footer div ul {
@@ -719,7 +729,8 @@ footer p {
   text-align: center;
 }
 
-input[type=text], select {
+input[type=text],
+select {
   padding: 12px 20px;
   margin: 30px 0;
   display: inline-block;
@@ -731,7 +742,7 @@ button[type=submit] {
   padding: 14px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #36454F;
+  background-color: #36454f;
   cursor: pointer;
 }
 
@@ -740,7 +751,7 @@ button[type=submit] {
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
-  background-color: #36454F;
+  background-color: #36454f;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
@@ -756,12 +767,24 @@ button[type=submit] {
   justify-content: space-around;
 }
 
-.button1, .button2, .button3, .button4, .button5, .button6, .button7 {
+.button1,
+.button2,
+.button3,
+.button4,
+.button5,
+.button6,
+.button7 {
   color: white;
-  border: 2px solid #04AA6D;
+  border: 2px solid #04aa6d;
 }
 
-.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover, .button6:hover, .button7:hover {
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover,
+.button5:hover,
+.button6:hover,
+.button7:hover {
   color: black;
   background-color: white;
 }

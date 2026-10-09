@@ -39,6 +39,85 @@
   background-color: white;
   align-items: center;
 }
+.world-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  background-color: #3c4142;
+  background-repeat: no-repeat;
+  -ms-animation: animatedClouds 30s linear infinite;
+  -moz-animation: animatedClouds 30s linear infinite;
+  -webkit-animation: animatedClouds 30s linear infinite;
+  animation: animatedClouds 30s linear infinite;
+  background-image:
+    url("../images/198daeda14097d45e417e62ff283f10e.png"),
+    url("../images/Clouds-PNG-Pic.png");
+}
+.world-section img {
+  display: block;
+}
+.countrytextblock {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
+  display: none;
+}
+.footprint {
+  &:hover {
+    cursor: pointer;
+    .countrytextblock {
+      display: block;
+    }
+  }
+}
+.textblock {
+  border: 1px solid white;
+  height: 100px;
+  width: 100%;
+}
+
+#footprint0,
+#footprint1,
+#footprint2,
+#footprint3,
+#footprint4 {
+  position: absolute;
+}
+#footprint0 {
+  top: 16.746%;
+  left: 16.602%;
+  width: 4.883%;
+}
+#footprint1 {
+  bottom: 16.746%;
+  left: 29.297%;
+  width: 4.883%;
+}
+#footprint2 {
+  top: 45.455%;
+  left: 51.758%;
+  width: 4.883%;
+}
+
+#footprint3 {
+  top: 23.923%;
+  right: 24.414%;
+  width: 4.883%;
+}
+
+.footprintimage {
+  filter: brightness(0) invert(1);
+}
+#world {
+  background-position:
+    bottom right,
+    bottom right;
+  background-size: cover, cover;
+}
+
 .wrapstorytextbody {
   display: flex;
   background-color: #36454f;

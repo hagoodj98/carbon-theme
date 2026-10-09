@@ -1,0 +1,841 @@
+@import "reset";
+@import "variables";
+
+// @import 'desktop';
+-webkit-keyframes animatedClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@-ms-keyframes animatedClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@-moz-keyframes animatedClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes animatedClouds {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+header.sticky {
+  padding: 20px 20px;
+  background-color: white;
+}
+header.sticky .noshowwhitelogo {
+  display: none;
+}
+
+header.sticky a {
+  color: #000;
+}
+
+header.sticky .hamburger div {
+  background-color: #000;
+}
+header.sticky nav ul li a {
+  color: #000;
+}
+header.sticky nav ul li ul li a {
+  color: white;
+}
+
+header.sticky .noshowblacklogo {
+  display: inline;
+}
+
+.noshowwhitelogo {
+  display: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: 0.6s;
+  background-color: fff;
+  padding-top: 20px;
+  //padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+header .headerlogo {
+  font-weight: 800;
+  font-family: $font-headline;
+  //border: 2px solid red;
+  font-size: 18px;
+  display: flex;
+
+  flex-direction: row-reverse;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+header h3 {
+  display: none;
+}
+header .navbar {
+  transition: top 0.3s;
+}
+header .navbar ul {
+  list-style: none;
+}
+header .navbar ul li {
+  position: relative;
+  float: left;
+}
+
+header .navbar ul li a {
+  font-size: $font-size-a;
+  padding: 20px;
+  color: white;
+  font-family: $font-navigation;
+  display: block;
+  text-decoration: none;
+}
+header .navbar ul li a:hover {
+  background-color: #36454f;
+  color: white;
+}
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: black;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+@media (max-width: 1023px) {
+  header {
+    //    padding: 10px;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: initial;
+    cursor: pointer;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+
+    border-top: 1px solid black;
+  }
+
+  header .navbar ul {
+    display: flex;
+    align-self: self-start;
+    flex-direction: column;
+  }
+  header .navbar ul li {
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+    background-color: white;
+  }
+  header .navbar ul li ul li a {
+    background-color: #36454f;
+    color: white;
+    font-size: 15px;
+  }
+  header.sticky .navbar ul li a {
+    color: white;
+  }
+
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+  header .navbar ul li a:hover {
+    background-color: white;
+    color: black;
+  }
+}
+#menu-bar {
+  display: none;
+}
+
+.headerandlogo {
+  display: flex;
+  align-items: center;
+  //border: 2px solid red;
+  justify-content: space-between;
+}
+.centeredsection {
+  text-align: center;
+}
+.headerandlogo .logoposition {
+  width: 20%;
+  display: flex;
+  align-self: start;
+  justify-content: space-around;
+}
+
+.logo {
+  transform: rotate(45deg);
+}
+
+h2 {
+  font-size: $font-h2-size;
+}
+
+.item {
+  //  border-top: 1px solid #18dcff;
+  overflow: hidden;
+}
+
+.firstimage {
+  margin-top: 30px;
+}
+.centeredphoto {
+  background-color: white;
+}
+.headerlineheight {
+  // max-width:  100%;
+  // margin-top: 10px;
+  //padding: 10px;
+  font-family: $font-headline;
+  font-weight: 900;
+  color: $color-secondary;
+}
+.headerlineheight2 {
+  font-family: $font-headline;
+  font-size: $font-headline-mobile-size;
+  font-weight: 900;
+  color: $color-primary;
+}
+
+.firstquote {
+  //position: absolute;
+  margin-top: 80px;
+}
+#promoterheader {
+  margin-bottom: 30px;
+  //font-family: $font-headline;
+  font-weight: 900;
+  //color:  $color-primary;
+  padding-left: 10px;
+  margin-top: 20px;
+  //font-size: $font-promoter-header-size;
+}
+#Actionsheader {
+  margin-bottom: 30px;
+  //font-family: $font-headline;
+  font-weight: 900;
+  //color:  $color-primary;
+  padding-left: 10px;
+  margin-top: 20px;
+  //font-size: $font-promoter-header-size;
+}
+
+/*
+.logo  {
+display: none;
+}
+
+/*************images**********/
+.story-1-illustration {
+  margin-top: 300px;
+}
+
+img {
+  max-width: 100%;
+}
+
+#droughtimage {
+  margin-top: 300px;
+}
+.formheaders {
+  color: #000;
+}
+
+#supportmotherearth {
+  font-size: $font-photocredit-size;
+  font-family: $font-caption;
+  font-style: $font-credit-aside-style;
+}
+.photocredit {
+  font-size: $font-photocredit-size;
+  font-family: $font-caption;
+  font-style: $font-credit-aside-style;
+
+  color: #3c4142;
+  padding: 30px;
+}
+.personname {
+  margin-top: 10px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+/**************end images*******/
+
+/*********************goody png's**********/
+
+/*#goodyinstruction  {
+position: absolute;
+margin-top: 500px;
+font-size: 20px;
+font-weight: bold;
+margin-right: 200px;
+}
+#goodyfooter {
+margin-top: 1000px;
+}*/
+/******************end goody page********/
+.foot-main {
+  font-size: 20px;
+  height: 238px;
+  text-align: center;
+  line-height: 18px;
+}
+/****************paragraphs**************/
+.openquote p {
+  // width:  109px;
+  font-size: 22px;
+  //width: 80%;
+
+  font-family: $font-open-quote;
+  font-weight: 300;
+  //position: absolute;
+  //margin: 100px 180px;
+  color: black;
+}
+.openquote {
+  //  margin:  auto;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: start;
+}
+.centeredtitleandbutton {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.centeredtitleandbutton p {
+  // width:  109px;
+  font-size: 25px;
+  //width: 80%;
+  font-family: $font-open-quote;
+  font-weight: 300;
+  //position: absolute;
+  //margin: 100px 180px;
+  color: black;
+}
+p {
+  line-height: 2em;
+  font-size: 18px;
+}
+.headerandonesentence {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: center;
+  align-items: start;
+  //background-image: url("../images/co2-levels.jpg");
+  ////background-size: cover;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-attachment: fixed;
+  //padding: 30px;
+}
+
+#promotionsimage {
+  //background-image: url('../images/environmental_sciences02.jpg');
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-attachment: fixed;
+  //filter: brightness(50%);
+  height: 100svh;
+  //border: 2px solid red;
+}
+#interestimage {
+  //background-image: url('../images/global-warming.jpg');
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-attachment: fixed;
+  height: 100svh;
+  //border: 2px solid red;
+}
+#musicimage {
+  //background-image: url('../images/103025.jpg');
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //filter: brightness(50%);
+  //background-position: center;
+  //background-attachment: fixed;
+  height: 100svh;
+  //border: 2px solid red;
+}
+#carboncomplexity {
+  //background-image: url("../images/EmissionsIndustrial-Complex_OberhausenGermany2017_LukasSchulzeGetty_web.jpg");
+
+  //background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-attachment: fixed;
+  height: 100svh;
+  //border: 2px solid red;
+}
+#conversationimage {
+  //background-image: url("../images/trump_environment_ticker_nationalgeographic_1926130.jpg");
+
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#actionplanimage {
+  //background-image: url("../images/rawImage (1).jpg");
+  /*background-size: cover;
+background-repeat: no-repeat;
+filter: brightness(50%);
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#specificimage {
+  //background-image: url("../images/environmental.jpg");
+
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#peopleimage {
+  //background-image: url("../images/267695_original.jpg");
+
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#cultureimage {
+  //background-image: url("../images/photo-1415473655046-e32ca170859f.jpeg");
+
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#disliesimage {
+  //background-image: url("../images/181009-german-power-plant-ew-946a_3a8cb6532a691d7ce04064d09c1dac80.jpg");
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center bottom;
+filter: brightness(70%);
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#imagesimage {
+  //background-image: url("../images/216491-1600x1067-Carbon-footprint.jpg");
+  /*background-size: cover;
+background-repeat: no-repeat;
+filter: brightness(50%);
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+#carboneffectimagesimage {
+  //background-image: url("../images/file-20170526-6415-1uij00z.jpg");
+  /*background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+
+#globalimage {
+  //background-image: url('../images/photo-1465917566611-efba2904dd8a.jpeg');
+  /* background-size: cover;
+background-repeat: no-repeat;
+background-position: top;
+background-attachment: fixed;*/
+  height: 100svh;
+  //border: 2px solid red;
+}
+
+.wrapstorytextbody {
+  display: flex;
+  // /margin: 30px;
+  // background-color: white;
+  flex-direction: column-reverse;
+}
+.wrapstorytextbody section {
+  display: flex;
+  background-color: white;
+  color: black;
+  //padding: 30px;
+  flex-direction: column;
+}
+
+.wrapstorytextbodyright {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.wrapstorytextbodyright section {
+  color: white;
+  background-color: #36454f;
+}
+.wrapstorytextbodyright section section {
+  background-color: white;
+}
+
+#myDIV h2,
+#myDIV6 h2,
+#myDIV5 h2,
+#myDIV2 h2 {
+  display: none;
+}
+
+#myDIV p,
+#myDIV2 p,
+#myDIV5 p,
+#myDIV6 p {
+  display: none;
+}
+#goodycaution {
+  // border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+}
+
+#goodypage {
+  background-color: #3c4142;
+  //  border: 2px solid blue;
+  //height: 100vh;
+  // /padding: 20px;
+}
+.footprintsvg {
+  position: absolute;
+  width: 200px;
+  //display: inline-block;
+  display: none;
+}
+#readytohidegoody {
+  display: none;
+}
+
+#goodycontainer {
+  position: relative;
+  //top: 50%;
+
+  height: 100vh;
+  /////  border: 2px solid red;
+  //height: 100vh;
+  //  /top: 50%;
+  background-image:
+    url("../images/198daeda14097d45e417e62ff283f10e.png"),
+    url("../images/Clouds-PNG-Pic.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    0 0,
+    0 0;
+  -ms-animation: animatedClouds 100s linear infinite;
+  -moz-animation: animatedClouds 100s linear infinite;
+  -webkit-animation: animatedClouds 100s linear infinite;
+  animation: animatedClouds 100s linear infinite;
+  overflow: hidden;
+  // background-size: contain;
+}
+#instruction {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  padding: 20px;
+  width: auto;
+  color: white;
+  background-color: black;
+  display: none;
+}
+.sectionheaders {
+  background-color: #36454f;
+  font-weight: bolder;
+  color: white;
+  padding: 60px;
+  font-family: $font-headline;
+  //text-decoration: underline;
+  font-size: $font-sectionheads-size-mobile;
+}
+.imagesheaderpromotion {
+  background-color: white;
+  font-weight: bolder;
+  color: #3c4142;
+  padding: 100px;
+  //text-decoration: underline;
+  font-size: $font-sectionheads-size-mobile;
+}
+
+article {
+  padding: 30px;
+}
+
+h2 {
+  padding: 30px;
+  text-align: center;
+}
+
+.asidesection {
+  display: flex;
+  align-items: center;
+  background-color: #3c4142;
+}
+.asidesection p {
+  color: white;
+}
+
+aside {
+  //width: 50%;
+  max-width: 400px;
+  margin: auto;
+  //padding-bottom: 30px;
+  padding: 50px;
+}
+.newwraptextright {
+  display: flex;
+  background-color: white;
+  flex-direction: column-reverse;
+}
+.containerforimages {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.world-section {
+  height: 100vh;
+  background-color: #36454f;
+}
+.world-section img {
+  display: none;
+}
+aside p {
+  //color: white;
+
+  font-size: $font-aside-size;
+  font-style: $font-credit-aside-style;
+}
+.allwhite {
+  background-color: #04aa6d;
+}
+
+footer div ul {
+  display: none;
+}
+
+footer {
+  background-color: black;
+}
+.footertitleandsvg {
+  display: flex;
+}
+
+.footertitleandsvg div {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  // border: 2px solid red;
+}
+.qoutename {
+  font-weight: bolder;
+  font-size: 23px;
+}
+
+.footernav ul li a {
+  font-family: $font-navigation;
+}
+
+footer h4 {
+  color: white;
+  font-family: $font-footertitle;
+  font-size: $font-footer-sizemobile;
+  font-weight: 600;
+}
+.footerprintsvg {
+  max-width: 25px;
+
+  transform: rotate(25deg);
+  //padding: 16px;
+}
+.footerform {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#topbuttons {
+  display: block;
+}
+footer p {
+  font-size: 15px;
+  text-align: center;
+}
+input[type="text"],
+select {
+  padding: 12px 20px;
+  margin: 30px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  padding: 14px 20px;
+  //margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #36454f;
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  //color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #36454f;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.footertitleandphoto {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-around;
+}
+.button1,
+.button2,
+.button3,
+.button4,
+.button5,
+.button6,
+.button7 {
+  color: white;
+  border: 2px solid #04aa6d;
+}
+
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover,
+.button5:hover,
+.button6:hover,
+.button7:hover {
+  color: black;
+  background-color: white;
+}
+#landingbutton:hover {
+  color: #000;
+  background-color: white;
+}
+
+.icon {
+  // display: block;
+  display: none;
+}
+
+.asideforstory4 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#humanheader {
+  position: absolute;
+  margin-top: 1550px;
+  margin-left: 15px;
+}
+#populationheader {
+  visibility: hidden;
+}
+#agricultureheader {
+  position: absolute;
+  margin-top: 3655px;
+  margin-left: 20px;
+}
+.wrapstory1 {
+  margin-top: 130px;
+}
+#movehomeparagraphdown {
+  margin-top: 250px;
+}
+
+#actionparapgraphfornav {
+  margin-top: 60px;
+}
+/****************end paragraphs**************/
+#fieldset {
+  margin-top: 50px;
+}
+/***** media query for desktop****/
