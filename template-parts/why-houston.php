@@ -26,18 +26,3 @@
     </div>
     <p class="section-note">Learn why Houston has unique challenges when it comes to carbon emissions.</p>
 </section>
-
-
-<!-- Pages
-
-* About Carbon
-* Houston
-* Climate Action Plan
-* Sources
-
-Posts / Custom Post Types
-
-* Articles
-* Scientist Interviews
-* Conversations
-* Case Studies-->

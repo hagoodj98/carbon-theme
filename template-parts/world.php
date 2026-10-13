@@ -11,7 +11,7 @@
             'post_mime_type' => 'image',
             'post_status' => 'inherit', // Only get images that are attached to posts
             'posts_per_page' => -1,
-            'post__in' => array(134, 169)
+            'post__in' => array(134, 161)
         ));
         while ($image_query->have_posts()) {
             $image_query->the_post();

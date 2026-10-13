@@ -4,7 +4,7 @@
         <div class="hero-buttons">
             <a href="#" class="hero-button">Explore Houston's Impact</a>
 
-            <a href="<?php echo site_url('/donation'); ?>" class="hero-button">Take Action</a>
+            <a href="<?php echo site_url('/take-action'); ?>" class="hero-button">Take Action</a>
         </div>
 
     </div>

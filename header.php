@@ -9,11 +9,24 @@
 
 <body>
     <header style="border-bottom: 2px solid white;">
-        <a href="<?php echo site_url() ?>" class="headerlogo">
-            <h1>Houston's Carbon Footprint</h1>
-            <img src="images/Mask group (5).svg" salt="white foot steps" class="footerprintsvg noshowwhitelogo">
-            <img src="images/carbon-footprint.png" salt="white foot steps" class="footerprintsvg noshowblacklogo">
-        </a>
+
+        <?php
+        $imageId = 161;
+        $imageUrl = wp_get_attachment_image_url($imageId, 'full');
+        if ($imageUrl) {
+        ?>
+            <a href="<?php echo site_url() ?>" class="headerlogo">
+                <h1>Houston's Carbon Footprint</h1>
+                <img style="filter: brightness(0) invert(1);" src="<?php echo $imageUrl; ?>" alt="white foot steps" class="footerprintsvg noshowwhitelogo">
+            </a>
+        <?php
+        }
+        ?>
+
+
+
+
+
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar">
             <div class="hamburger">

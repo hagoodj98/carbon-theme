@@ -670,7 +670,15 @@ aside {
 }
 .world-section {
   height: 100vh;
-  background-color: #36454f;
+  background-color: #3c4142;
+  background-repeat: no-repeat;
+  -ms-animation: animatedClouds 30s linear infinite;
+  -moz-animation: animatedClouds 30s linear infinite;
+  -webkit-animation: animatedClouds 30s linear infinite;
+  animation: animatedClouds 30s linear infinite;
+  background-image:
+    url("../images/198daeda14097d45e417e62ff283f10e.png"),
+    url("../images/Clouds-PNG-Pic.png");
 }
 .world-section img {
   display: none;

@@ -8,18 +8,9 @@
     </div>
 
     <div class="three-sections stat-cards">
-        <div class="card">
-            <h3>Energy & Industry</h3>
-            <p class="stat-number">[XX%]</p>
-        </div>
-        <div class="card">
-            <h3>Transportation</h3>
-            <p class="stat-number">[XX%]</p>
-        </div>
-        <div class="card">
-            <h3>Buildings & Energy Use</h3>
-            <p class="stat-number">[XX%]</p>
-        </div>
+        <?php createCard('Energy & Industry', '[XX%]', 0); ?>
+        <?php createCard('Transportation', '[XX%]', 0); ?>
+        <?php createCard('Buildings & Energy Use', '[XX%]', 0); ?>
     </div>
     <div class="section-outro">
         <h2>Why These Numbers Matter</h2>

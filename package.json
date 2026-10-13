@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "wp-scripts start"
+    "start": "wp-scripts start",
+    "sync": "npx browser-sync start --proxy \"http://carbon-footprint.local/\" --files \"**/*.php, css/*.css\""
   },
   "author": "",
   "license": "ISC",
