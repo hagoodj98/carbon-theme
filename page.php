@@ -18,6 +18,8 @@ while (have_posts()) {
         $isChildPage = wp_get_post_parent_id(get_the_ID());
 
         if ($isChildPage) {
+
+
             $postID = get_the_ID();
         ?>
 
@@ -28,33 +30,6 @@ while (have_posts()) {
                     'content' => $templateOrderOutput[$i]['section']['content'],
 
                 ]]);
-            }
-            if (is_page('the-aftermath')) {
-                $getPastEvents = new WP_Query(array(
-                    'post_type' => 'events',
-                    'posts_per_page' => 3,
-
-                ));
-                while ($getPastEvents->have_posts()) {
-                    $getPastEvents->the_post();
-                    $template_order = get_template_event_post_type(get_the_ID(), true);
-
-                    get_template_part('template-parts/event', null, ['single-event' => $template_order]);
-                }
-                wp_reset_postdata();
-            }
-            if (is_page('conversations')) {
-                $getTalks = new WP_Query(array(
-                    'post_type' => 'talks',
-                    'posts_per_page' => 3,
-                ));
-                while ($getTalks->have_posts()) {
-                    $getTalks->the_post();
-                    $template_order = get_template_talk_post_type(get_the_ID(), true);
-
-                    get_template_part('template-parts/talk', null, ['single-talk' => $template_order]);
-                }
-                wp_reset_postdata();
             }
         } else {
 

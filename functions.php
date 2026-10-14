@@ -31,6 +31,7 @@ function createCard(string $title, string $content, int $stat)
 
 
 function get_template_order(int $post_id)
+
 {
     $raw_content = get_post_field('post_content', $post_id);
     $blocks = parse_blocks($raw_content);
@@ -48,74 +49,6 @@ function get_template_order(int $post_id)
         $className = $block['attrs']['className'] ?? '';
 
         if (isset($templates[$className])) {
-            $templateOrder[] = array(
-                'section' => [
-                    'template' => $templates[$className],
-                    'content' => $block
-                ],
-            );
-        }
-    }
-
-    return $templateOrder;
-}
-function get_template_event_post_type(int $post_id, $meta_only = false)
-{
-    $raw_content = get_post_field('post_content', $post_id);
-    $blocks = parse_blocks($raw_content);
-    $templates = [
-        'event-metadata-section' => 'template-parts/event-metadata-section',
-        'event-what-happened-section' => 'template-parts/event-what-happened-section',
-        'event-impacts-section' => 'template-parts/event-impacts-section',
-        'event-take-away-section' => 'template-parts/event-take-away-section',
-        'event-source-section' => 'template-parts/event-source-section'
-    ];
-    $templateOrder = [];
-    foreach ($blocks as $block) {
-
-        $className = $block['attrs']['className'] ?? '';
-        if ($meta_only && isset($templates[$className]) && $className === 'event-metadata-section') {
-            $templateOrder[] = array(
-                'section' => [
-                    'template' => $templates[$className],
-                    'content' => $block
-                ],
-            );
-        } else if (!$meta_only && isset($templates[$className])) {
-            $templateOrder[] = array(
-                'section' => [
-                    'template' => $templates[$className],
-                    'content' => $block
-                ],
-            );
-        }
-    }
-
-    return $templateOrder;
-}
-
-function get_template_talk_post_type(int $post_id, $meta_only = false)
-{
-    $raw_content = get_post_field('post_content', $post_id);
-    $blocks = parse_blocks($raw_content);
-    $templates = [
-        'talk-metadata-section' => 'template-parts/talk-intro-section',
-        'talks-excerpt-section' => 'template-parts/talk-excerpt-section',
-        'talks-learn-section' => 'template-parts/talk-learn-section',
-        'talks-video-section' => 'template-parts/talk-video-section'
-    ];
-    $templateOrder = [];
-    foreach ($blocks as $block) {
-
-        $className = $block['attrs']['className'] ?? '';
-        if ($meta_only && isset($templates[$className]) && $className === 'talks-excerpt-section') {
-            $templateOrder[] = array(
-                'section' => [
-                    'template' => $templates[$className],
-                    'content' => $block
-                ],
-            );
-        } else if (!$meta_only && isset($templates[$className])) {
             $templateOrder[] = array(
                 'section' => [
                     'template' => $templates[$className],
