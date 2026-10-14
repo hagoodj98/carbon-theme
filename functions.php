@@ -31,10 +31,6 @@ function createCard(string $title, string $content, int $stat)
 
 
 function get_template_order(int $post_id)
-<<<<<<< HEAD
-
-=======
->>>>>>> copilot/same-text-over-image-event-talks
 {
     $raw_content = get_post_field('post_content', $post_id);
     $blocks = parse_blocks($raw_content);
@@ -63,8 +59,6 @@ function get_template_order(int $post_id)
 
     return $templateOrder;
 }
-<<<<<<< HEAD
-=======
 function get_template_event_post_type(int $post_id, $meta_only = false)
 {
     $raw_content = get_post_field('post_content', $post_id);
@@ -133,4 +127,3 @@ function get_template_talk_post_type(int $post_id, $meta_only = false)
 
     return $templateOrder;
 }
->>>>>>> copilot/same-text-over-image-event-talks

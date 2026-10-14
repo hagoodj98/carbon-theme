@@ -18,32 +18,6 @@ while (have_posts()) {
         $isChildPage = wp_get_post_parent_id(get_the_ID());
 
         if ($isChildPage) {
-<<<<<<< HEAD
-
-
-            $postID = get_the_ID();
-        ?>
-
-        <?php
-            $templateOrderOutput = get_template_order($postID);
-            for ($i = 0; $i < count($templateOrderOutput); $i++) {
-                get_template_part($templateOrderOutput[$i]['section']['template'], null, ['childPage' => [
-                    'content' => $templateOrderOutput[$i]['section']['content'],
-
-                ]]);
-            }
-        } else {
-
-
-            $childPages = new WP_Query(array(
-                'post_type' => 'page',
-                'post_parent' => get_the_ID(),
-            ));
-
-            get_template_part('template-parts/parent-page-intro');
-
-
-=======
             $postID = get_the_ID();
         ?>
 
@@ -93,7 +67,6 @@ while (have_posts()) {
             get_template_part('template-parts/parent-page-intro');
 
 
->>>>>>> copilot/same-text-over-image-event-talks
             if ($childPages->have_posts()) {
                 get_template_part('template-parts/card-section', null, ['childPages' => $childPages]);
             }
