@@ -1,0 +1,421 @@
+@import "reset";
+@import "variables";
+
+@media (min-width: 321px) {
+  @import "mobile";
+
+  /////////////////////////////////////////
+}
+
+@media (min-width: 650px) {
+  //.imgforbackground{
+  // display: none;
+  // }
+
+  .headerandonesentence {
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    // height: 100vh;
+    position: relative;
+    justify-content: center;
+
+    height: 100svh;
+    align-items: start;
+    // background-image: url("../images/co2-levels.jpg");
+    //  background-size: cover;
+    //  background-position: center;
+    // background-repeat: no-repeat;
+    //  background-attachment: fixed;
+    //  padding: 30px;
+  }
+  #promotionsimage {
+    //background-image: url('../images/environmental_sciences02.jpg');
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #interestimage {
+    //background-image: url('../images/global-warming.jpg');
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #musicimage {
+    //background-image: url('../images/103025.jpg');
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #carboncomplexity {
+    //background-image: url("../images/EmissionsIndustrial-Complex_OberhausenGermany2017_LukasSchulzeGetty_web.jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #conversationimage {
+    //background-image: url("../images/trump_environment_ticker_nationalgeographic_1926130.jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #actionplanimage {
+    //background-image: url("../images/rawImage (1).jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #specificimage {
+    //background-image: url("../images/environmental.jpg");
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #peopleimage {
+    //background-image: url("../images/267695_original.jpg");
+    height: 100svh;
+
+    //border: 2px solid red;
+  }
+  #cultureimage {
+    //background-image: url("../images/photo-1415473655046-e32ca170859f.jpeg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #disliesimage {
+    //background-image: url("../images/181009-german-power-plant-ew-946a_3a8cb6532a691d7ce04064d09c1dac80.jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #imagesimage {
+    //background-image: url("../images/216491-1600x1067-Carbon-footprint.jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #carboneffectimagesimage {
+    //background-image: url("../images/file-20170526-6415-1uij00z.jpg");
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+
+  #globalimage {
+    // background-image: url('../images/photo-1465917566611-efba2904dd8a.jpeg');
+
+    height: 100svh;
+    //border: 2px solid red;
+  }
+
+  .headerandonesentence div {
+    height: 47%;
+  }
+
+  .openquote {
+    //  margin:  auto;
+    display: flex;
+    padding: 30px;
+    position: absolute;
+    //padding: 50px;
+    flex-direction: column;
+    //align-items: start;
+  }
+
+  .openquote p {
+    // width:  109px;
+    font-size: 28px;
+
+    font-family: $font-open-quote;
+    font-weight: 300;
+    //position: absolute;
+    //margin: 100px 180px;
+    color: white;
+  }
+  .centeredtitleandbutton {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+
+    align-items: center;
+  }
+  .centeredtitleandbutton p {
+    // width:  109px;
+    font-size: 25px;
+    //width: 80%;
+    // font-family: $font-open-quote;
+    font-weight: 300;
+    //position: absolute;
+    //margin: 100px 180px;
+    color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  .openquote p {
+    // width:  109px;
+    font-size: 30px;
+
+    //   font-family: $font-open-quote;
+    font-weight: 300;
+    //position: absolute;
+    //margin: 100px 180px;
+    color: white;
+  }
+  .openquote {
+    //  margin:  auto;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .footerprintsvg {
+    max-width: 30px;
+
+    transform: rotate(25deg);
+    padding: 16px;
+  }
+
+  .imgforbackground {
+    display: none;
+  }
+  .headerandonesentence {
+    display: flex;
+    flex-direction: column;
+    height: 100svh;
+    justify-content: center;
+    align-items: start;
+    background-image: url("../images/co2-levels.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    //padding: 30px;
+  }
+
+  #promotionsimage {
+    background-image: url("../images/environmental_sciences02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #interestimage {
+    background-image: url("../images/global-warming.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #musicimage {
+    background-image: url("../images/103025.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #carboncomplexity {
+    background-image: url("../images/EmissionsIndustrial-Complex_OberhausenGermany2017_LukasSchulzeGetty_web.jpg");
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #conversationimage {
+    background-image: url("../images/trump_environment_ticker_nationalgeographic_1926130.jpg");
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #actionplanimage {
+    background-image: url("../images/rawImage (1).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #specificimage {
+    background-image: url("../images/environmental.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #peopleimage {
+    background-image: url("../images/267695_original.jpg");
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #cultureimage {
+    background-image: url("../images/photo-1415473655046-e32ca170859f.jpeg");
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #disliesimage {
+    background-image: url("../images/181009-german-power-plant-ew-946a_3a8cb6532a691d7ce04064d09c1dac80.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #imagesimage {
+    background-image: url("../images/216491-1600x1067-Carbon-footprint.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  #carboneffectimagesimage {
+    background-image: url("../images/file-20170526-6415-1uij00z.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+  .centeredtitleandbutton p {
+    font-size: 32px;
+    font-weight: 300;
+  }
+  #globalimage {
+    background-image: url("../images/photo-1465917566611-efba2904dd8a.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: #36454f;
+    background-attachment: fixed;
+    height: 100svh;
+    //border: 2px solid red;
+  }
+
+  .headerandonesentence div {
+    height: 37%;
+  }
+
+  .sectionheaderleftside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hamburger .line {
+    //width: 30px;
+    //height: 3px;
+    background-color: white;
+    //margin: 6px 0;
+  }
+  .noshowblacklogo {
+    display: none;
+  }
+  .noshowwhitelogo {
+    display: inline;
+  }
+}
+
+@media (min-width: 1024px) {
+  //@import 'desktopsamegrid';
+  //@import 'footer';
+  section {
+    padding: 40px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../images/co2-levels.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100svh;
+  }
+  .hero-content {
+    width: 65%;
+  }
+  h2 {
+    text-align: $font-h2-align-lg;
+    padding: $font-h2-padding-lg;
+  }
+  .hero-buttons {
+    display: flex;
+    width: 65%;
+    gap: 10px;
+    padding: $font-h2-padding-lg;
+  }
+  .three-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 40px 0px;
+  }
+  .explore {
+    display: flex;
+    flex-direction: column;
+  }
+  .exploreOptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  @import "desktop";
+}
+
+@import "home";
+
+@import "pages";
