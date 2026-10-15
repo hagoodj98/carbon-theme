@@ -45,3 +45,70 @@ footprints.forEach((footprint) => {
     textBlock.innerHTML = ``;
   });
 });
+
+function drawChart(footprintValue) {
+  const ctx = document.getElementById("myChart");
+  if (!ctx) return;
+
+  const xValues = ["Your Carbon Footprint"];
+  const yValues = [footprintValue];
+  const barColors = ["#f19d15"];
+  // Destroy existing chart if it exists before creating a new one
+  const existingChart = Chart.getChart("myChart");
+  if (existingChart) {
+    existingChart.destroy();
+  }
+  new Chart(ctx, {
+    type: "doughnut",
+    data: {
+      labels: xValues,
+      datasets: [
+        {
+          backgroundColor: barColors,
+          data: yValues,
+          animation: {
+            animateRotate: true,
+          },
+          hoverOffset: 4,
+        },
+      ],
+    },
+    options: {
+      plugins: {
+        legend: { display: true },
+        title: {
+          display: true,
+          text: "Your Carbon Footprint",
+          font: { size: 16 },
+        },
+      },
+    },
+  });
+  document.querySelector(".fp-chart").style.display = "block";
+}
+
+document
+  .querySelector(".footprint-form")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+    const ajaxurl = "http://localhost:3000/wp-admin/admin-ajax.php";
+    const response = await fetch(ajaxurl, {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    if (Number.isFinite(Number(data.data.footprint))) {
+      drawChart(Number(data.data.footprint));
+    }
+  });
+
+/*
+// The calculator shortcode puts the server's result on the canvas after the form redirect
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("myChart");
+  if (canvas && canvas.dataset.footprint) {
+    drawChart(Number(canvas.dataset.footprint));
+  }
+});
+*/

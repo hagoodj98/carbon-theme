@@ -4,7 +4,11 @@
 
 function carbon_files()
 {
+    wp_enqueue_script('chartjs', 'https://cdn.jsdelivr.net/npm/chart.js@4.5.0', array(), null, true);
     wp_enqueue_script('carbon_main_script', get_theme_file_uri('/src/index.js'), array(), filemtime(get_stylesheet_directory() . '/src/index.js'), true);
+    wp_localize_script('carbon_main_script', 'carbonEnv', array(
+        'baseUrlServer' => defined('BASE_URL_SERVER') ? BASE_URL_SERVER : '',
+    ));
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
     wp_enqueue_style('fonttwo', 'https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
     wp_enqueue_style('carbon_main_styles', get_theme_file_uri('/css/main.css'), array(), filemtime(get_stylesheet_directory() . '/css/main.css'));
@@ -27,6 +31,9 @@ function createCard(string $title, string $content, int $stat)
     if ($stat) echo '<p class="stat-number">' . $stat . '</p>';
     echo '</div>';
 }
+
+
+
 
 
 

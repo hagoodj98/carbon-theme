@@ -1,23 +1,16 @@
-<section class="event">
-    <?php
+<?php
 
-    if (isset($args['single-event'])) {
-        $single_event = $args['single-event'];
-    ?>
+$image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+$style = $image ? '--card-bg: url(' . esc_url($image) . ');' : '';
 
-
-        <h2><?php the_title(); ?></h2>
-        <?php if (!empty($single_event)) { ?>
-            <div>
-                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnailq'); ?>" alt="">
-                <?php echo render_block($single_event[0]['section']['content']); ?>
+?>
+<article class="post-card event" style="<?php echo esc_attr($style); ?>">
+    <?php if (isset($args['single-event'])) { ?>
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <?php if (!empty($args['single-event'])) { ?>
+            <div class="post-card__text">
+                <?php echo render_block($args['single-event'][0]['section']['content']); ?>
             </div>
         <?php } ?>
-
-    <?php
-    }
-
-    ?>
-
-
-</section>
+    <?php } ?>
+</article>

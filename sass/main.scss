@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 @media (min-width: 321px) {
   @import "mobile";

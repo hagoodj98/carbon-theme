@@ -1,23 +1,16 @@
-<section class="talk">
-    <?php
+<?php
 
-    if (isset($args['single-talk'])) {
-        $single_talk = $args['single-talk'];
-    ?>
+$image = get_the_post_thumbnail_url(get_the_ID(), 'large');
+$style = $image ? '--card-bg: url(' . esc_url($image) . ');' : '';
 
-
-        <h2><?php the_title(); ?></h2>
-        <?php if (!empty($single_talk)) { ?>
-            <div>
-                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnailq'); ?>" alt="">
-                <?php echo wp_trim_words(render_block($single_talk[0]['section']['content']), 10); ?>
+?>
+<article class="post-card talk" style="<?php echo esc_attr($style); ?>">
+    <?php if (isset($args['single-talk'])) { ?>
+        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+        <?php if (!empty($args['single-talk'])) { ?>
+            <div class="post-card__text">
+                <?php echo wp_trim_words(render_block($args['single-talk'][0]['section']['content']), 10); ?>
             </div>
         <?php } ?>
-
-    <?php
-    }
-
-    ?>
-
-
-</section>
+    <?php } ?>
+</article>
