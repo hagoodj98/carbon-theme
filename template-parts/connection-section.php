@@ -1,8 +1,9 @@
 <?php
-if (is_page('reducing-your-carbon-footprint')) {
-
-    echo do_shortcode('[carbon_calculator]');
-}
+if (is_page('reducing-your-carbon-footprint')) { ?>
+    <div id="shortcode-chart">
+        <?php echo do_shortcode('[carbon_calculator]'); ?>
+    </div>
+<?php }
 ?>
 
 

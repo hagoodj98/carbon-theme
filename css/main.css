@@ -14146,11 +14146,54 @@ section.related-sources {
     padding: 36px 20px;
   }
 }
+.grade-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grade-chart-container.hidden {
+  display: none;
+}
+
+.grade-chart-container.good {
+  background-color: #027901;
+  color: #fff;
+}
+
+.grade-chart-container.bad {
+  background-color: #f19d15;
+  color: #fff;
+}
+
+.grade-chart-container.meh {
+  background-color: #fbc02d;
+  color: black;
+}
+
+.grade-chart-container.horrible {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.grade-chart-container.great {
+  background-color: #1e88e5;
+  color: #fff;
+}
+
+.grade-chart-container.excellent {
+  background-color: #7b3fb5;
+  color: #fff;
+}
+
+.grade-section {
+  flex: 1;
+}
+
 .fp-chart {
   position: relative;
   width: 100%;
-  display: none;
-  max-width: 320px;
+  flex: 1;
   margin: 0 auto 24px;
 }
 

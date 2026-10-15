@@ -3,6 +3,10 @@ $pg-green: #027901;
 $pg-orange: #f19d15;
 $pg-dark: #0a0a0a;
 $pg-light: #f4f7f4;
+$pg-red: #d32f2f;
+$pg-yellow: #fbc02d;
+$pg-blue: #1e88e5;
+$pg-purple: #7b3fb5;
 
 body:has(.parent-page-intro, .intro-section, .form-section, .cpt-single) {
   background: $pg-light;
@@ -421,13 +425,49 @@ section.related-sources {
     padding: 36px 20px;
   }
 }
+
+.grade-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grade-chart-container.hidden {
+  display: none;
+}
+.grade-chart-container.good {
+  background-color: $pg-green;
+  color: #fff;
+}
+.grade-chart-container.bad {
+  background-color: $pg-orange;
+  color: #fff;
+}
+.grade-chart-container.meh {
+  background-color: $pg-yellow;
+  color: black;
+}
+.grade-chart-container.horrible {
+  background-color: $pg-red;
+  color: #fff;
+}
+.grade-chart-container.great {
+  background-color: $pg-blue;
+  color: #fff;
+}
+.grade-chart-container.excellent {
+  background-color: $pg-purple;
+  color: #fff;
+}
+.grade-section {
+  flex: 1;
+}
 .fp-chart {
   position: relative;
   width: 100%;
-  display: none;
-  max-width: 320px;
+  flex: 1;
   margin: 0 auto 24px;
 }
+
 // Checkout-style donation form
 .form-section {
   max-width: 1000px;
