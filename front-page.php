@@ -4,7 +4,7 @@
 
 <section class="statistics">
     <div class="section-intro">
-        <h2>The Numbers Tell the Story</h2>
+        <h2>The Tell the Story</h2>
         <p>Houston is a major center for energy, industry, transportation, and commerce. Those activities help power the region, but they also produce a large share of its greenhouse-gas emissions.</p>
 
         <p>Knowing where those emissions come from is the first step toward reducing them.</p>
