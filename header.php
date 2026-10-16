@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head(); ?>
 </head>
+
 <body>
- 
-</body>
-</html>
-    
+    <header style="border-bottom: 2px solid white;">
+
+        <?php
+        $imageId = 161;
+        $imageUrl = wp_get_attachment_image_url($imageId, 'full');
+        if ($imageUrl) {
+        ?>
+            <a href="<?php echo site_url() ?>" class="headerlogo">
+                <h1>Houston's Carbon Footprint</h1>
+                <img style="filter: brightness(0) invert(1);" src="<?php echo $imageUrl; ?>" alt="white foot steps" class="footerprintsvg ">
+            </a>
+        <?php
+        }
+        ?>
+
+
+
+
+
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar">
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="<?php echo site_url('/the-problem'); ?>" class="active">The Problem</a></li>
+                <li><a href="<?php echo site_url('/houston'); ?>" class="active">Houston</a></li>
+                <li><a href="<?php echo site_url('/solutions'); ?>" class="active">Solutions</a></li>
+                <li><a href="<?php echo site_url('/explore'); ?>" class="active">Explore</a></li>
+
+            </ul>
+        </nav>
+    </header>

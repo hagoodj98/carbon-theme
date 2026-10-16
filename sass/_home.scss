@@ -1,0 +1,603 @@
+// Homepage section design (mobile-first, loaded last so it overrides older rules)
+$home-green: #027901;
+$home-orange: #f19d15;
+$home-dark: #0a0a0a;
+$home-light: #f4f7f4;
+
+.statistics,
+.why-houston,
+.solutions,
+.problem,
+.explore,
+.additional-info {
+  padding: 64px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    letter-spacing: 0.04em;
+    padding: 0 0 16px;
+    margin: 0 auto 8px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin: 14px auto 0;
+      background: $home-orange;
+      border-radius: 2px;
+    }
+  }
+
+  > p,
+  .section-intro p,
+  .section-outro p {
+    max-width: 720px;
+    margin: 0 auto 16px;
+    line-height: 1.7;
+    text-align: center;
+    color: #333;
+  }
+}
+.problem-content div {
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-content div a .cta-button {
+  margin-top: 16px;
+  padding: 14px 36px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $home-dark;
+  width: 100%;
+  background: $home-orange;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    background: #fff;
+    transform: scale(1.05);
+  }
+}
+
+.problem-content,
+.three-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 32px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  h3 {
+    margin: 0;
+    padding: 16px 16px 8px;
+    font-size: 1.2rem;
+  }
+}
+
+// Statistics
+.statistics {
+  .stat-cards .card {
+    text-align: center;
+    border-top: 5px solid $home-green;
+    padding-bottom: 20px;
+  }
+
+  .page-cards--children .card .stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: $home-green;
+    margin: 0;
+  }
+
+  .section-outro {
+    margin-top: 32px;
+    padding: 32px 20px;
+    background: $home-light;
+    border-radius: 12px;
+  }
+}
+
+// Why Houston
+.why-houston {
+  max-width: none;
+
+  h2,
+  .three-sections,
+  .section-note {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    padding: 30px 20px 0;
+    font-family: $font-headline;
+    text-align: center;
+  }
+
+  .section-note {
+    padding: 0 20px 30px;
+    text-align: center;
+  }
+
+  .why-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid $home-green;
+
+    &:nth-child(even) {
+      border-top-color: $home-orange;
+    }
+
+    h3 {
+      padding: 20px 16px 12px;
+    }
+
+    img {
+      flex: 1;
+      min-height: 220px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: $home-dark;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+  }
+
+  .section-note {
+    font-style: italic;
+  }
+}
+
+// What can we do
+.solutions {
+  background: $home-light;
+  max-width: none;
+
+  h2,
+  .three-sections {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .solution-card {
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.15)
+      );
+    }
+
+    .card-body {
+      flex: 0 0 auto;
+      position: relative;
+      padding: 20px;
+
+      h3 {
+        padding: 0 0 6px;
+        color: $home-orange;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .solution-individuals {
+    background-image: url("../images/trees-original.jpg");
+  }
+
+  .solution-businesses {
+    background-image: url("../images/Houston-skyline.jpg");
+  }
+
+  .solution-community {
+    background-image: url("../images/header-solar.jpg");
+  }
+}
+
+// Explore more
+.explore {
+  .exploreOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .explore-tile {
+    margin: 0;
+    padding: 28px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #fff;
+    background: $home-dark;
+    border-radius: 10px;
+    border-bottom: 4px solid $home-orange;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover {
+      background: $home-green;
+      transform: translateY(-4px);
+    }
+  }
+}
+
+// Call to action
+.additional-info {
+  max-width: none;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, $home-green, #014a00);
+
+  h2 {
+    color: #fff;
+  }
+
+  > p {
+    color: #fff;
+  }
+
+  .cta-button {
+    margin-top: 16px;
+    padding: 14px 36px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: $home-dark;
+    background: $home-orange;
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+
+    &:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (min-width: 650px) {
+  .problem-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .three-sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+// Hero
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  max-width: none;
+  padding: 120px 24px 60px;
+  background: url("../images/co2-levels.jpg") center / cover no-repeat;
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.35) 60%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    margin-left: clamp(0px, 6vw, 100px);
+  }
+
+  .hero-title {
+    margin: 0 0 28px;
+    padding: 0;
+    text-align: left;
+    font-size: clamp(2rem, 5vw, 3.6rem);
+    line-height: 1.15;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: auto;
+    padding: 0;
+  }
+
+  .hero-button {
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 999px;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:first-child {
+      background: $home-orange;
+      border-color: $home-orange;
+      color: $home-dark;
+    }
+
+    &:hover {
+      background: #fff;
+      border-color: #fff;
+      color: $home-dark;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Navigation
+header {
+  background: rgba(10, 10, 10, 0.88) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 3px solid $home-orange !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+
+  .headerlogo {
+    border: 0;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+  }
+
+  .navbar ul li a {
+    position: relative;
+    padding: 24px 14px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background: transparent;
+    transition: color 0.2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 16px;
+      height: 2px;
+      background: $home-orange;
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+    }
+
+    &:hover,
+    &.active:hover {
+      background: transparent;
+      color: $home-orange;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 0 6%;
+  }
+}
+
+header .headerlogo .footerprintsvg {
+  display: block;
+  flex: 0 0 auto;
+  width: 28px;
+  max-width: none;
+  height: auto;
+  padding: 0 10px 0 0;
+  transform: rotate(25deg);
+}
+
+header .hamburger .line {
+  background-color: #fff;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  header .headerlogo {
+    font-size: 16px;
+  }
+
+  header .navbar {
+    border-top: 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    border-bottom: 3px solid $home-orange;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      gap: 0;
+    }
+
+    ul li {
+      float: none;
+    }
+
+    ul li a {
+      padding: 18px 20px;
+      font-size: 17px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    ul li a:hover {
+      background: $home-orange;
+      color: #000;
+    }
+
+    ul li {
+      background: rgba(10, 10, 10, 0.96);
+    }
+
+    ul li a::after {
+      display: none;
+    }
+  }
+}
+
+// Footer
+footer {
+  background: $home-dark;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 3px solid $home-orange;
+  text-align: center;
+
+  .footernav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .footertitle {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    padding: 0;
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $home-orange;
+      background: transparent;
+    }
+  }
+
+  p {
+    margin: 8px 0 0;
+    padding: 0;
+    font-size: 0.85rem;
+    color: #888 !important;
+  }
+}

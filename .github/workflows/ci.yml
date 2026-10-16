@@ -1,0 +1,28 @@
+name: Theme
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Compile Sass
+        run: npx -y sass --no-charset --quiet sass/main.scss css/main.css
+
+      - name: Check JS syntax
+        run: node --check src/index.js
+
+      - name: Lint PHP
+        run: find . -name '*.php' -not -path './node_modules/*' -print0 | xargs -0 -n1 php -l > /dev/null
