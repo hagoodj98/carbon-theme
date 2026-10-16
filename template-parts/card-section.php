@@ -59,7 +59,7 @@ $sectionClass = $isSolutions ? 'three-sections' : 'page-cards ' . (isset($args['
 
                 <h3><?php echo $key; ?></h3>
                 <p class="stat-number"><?php echo "$value%"; ?></p>
-                <a href="<?php the_permalink(); ?>"><button>Read More</button></a>
+
             </div>
         <?php }
     }
