@@ -1,4 +1,4 @@
-// Interior pages (page.php): title banner, child-page cards, donation form
+// Interior pages (page.php): title banner, child-page cards
 $pg-green: #027901;
 $pg-orange: #f19d15;
 $pg-dark: #0a0a0a;
@@ -8,7 +8,7 @@ $pg-yellow: #fbc02d;
 $pg-blue: #1e88e5;
 $pg-purple: #7b3fb5;
 
-body:has(.parent-page-intro, .intro-section, .form-section, .cpt-single) {
+body:has(.parent-page-intro, .intro-section, .cpt-single) {
   background: $pg-light;
   color: $pg-dark;
   line-height: 1.6;
@@ -359,20 +359,21 @@ section.video-section {
 }
 
 section.connection-section {
-  margin: 24px auto 80px;
-  padding: 0 20px;
-  max-width: 1100px;
+  // Break out of the page column so the green band spans the full viewport
+  width: 100vw;
+  max-width: none;
+  margin: 24px calc(50% - 50vw) 80px;
+  padding: 0;
 
   > .wp-block-uagb-container {
-    padding: 48px 32px;
+    padding: 48px max(20px, calc((100vw - 1100px) / 2 + 32px));
     text-align: center;
     color: #fff;
     background:
       linear-gradient(135deg, rgba(2, 121, 1, 0.95), rgba(10, 10, 10, 0.95)),
       $pg-dark;
     border-bottom: 4px solid $pg-orange;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-radius: 0;
   }
 
   h2 {
@@ -404,6 +405,38 @@ section.connection-section {
 section.related-sources {
   @extend %pg-section;
   padding-bottom: 80px;
+
+  h2 {
+    @extend %pg-heading;
+    font-size: 1.4rem;
+    padding: 0 0 12px;
+    text-align: left;
+  }
+
+  .related-sources__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 2px solid $pg-green;
+      border-radius: 999px;
+      color: $pg-green;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+
+      &:hover {
+        background: $pg-green;
+        color: #fff;
+      }
+    }
+  }
 }
 
 @media (min-width: 800px) {
@@ -425,11 +458,23 @@ section.related-sources {
     padding: 36px 20px;
   }
 }
+.fp-error {
+  color: $pg-red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
 
 .grade-chart-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 24px 40px;
+  // Full-bleed band; padding keeps content aligned with the 920px form column
+  width: 100vw;
+  margin: 0 calc(50% - 50vw) 28px;
+  padding: clamp(24px, 4vw, 48px) max(20px, calc((100vw - 920px) / 2 + 20px));
+  box-sizing: border-box;
 }
 .grade-chart-container.hidden {
   display: none;
@@ -459,233 +504,36 @@ section.related-sources {
   color: #fff;
 }
 .grade-section {
-  flex: 1;
+  flex: 1 1 260px;
+  min-width: 0;
+  text-align: left;
+
+  .grade {
+    margin: 0 0 12px;
+    padding: 0;
+    text-align: left;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    color: inherit;
+  }
+
+  p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+  }
+
+  .fp-statement {
+    font-size: 0.85rem;
+    opacity: 0.85;
+  }
 }
 .fp-chart {
   position: relative;
+  flex: 1 1 260px;
   width: 100%;
-  flex: 1;
-  margin: 0 auto 24px;
-}
-
-// Checkout-style donation form
-.form-section {
-  max-width: 1000px;
-  margin: -24px auto 80px;
-  padding: 0 20px;
-
-  .checkout-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-
-  .checkout-main,
-  .checkout-summary {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
-    padding: 28px;
-  }
-
-  .checkout-step {
-    border: 0;
-    margin: 0 0 28px;
-    padding: 0;
-    min-width: 0;
-
-    legend {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-
-      span {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 28px;
-        height: 28px;
-        font-size: 0.85rem;
-        color: #fff;
-        background: $pg-green;
-        border-radius: 50%;
-      }
-    }
-  }
-
-  .amount-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: 12px;
-
-    label {
-      margin: 0;
-      cursor: pointer;
-    }
-
-    input {
-      position: absolute;
-      opacity: 0;
-      width: 0;
-    }
-
-    span {
-      display: block;
-      padding: 14px 0;
-      text-align: center;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 700;
-      text-transform: none;
-      letter-spacing: 0;
-      background: $pg-light;
-      border: 2px solid #dfe5df;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-    }
-
-    label:hover span {
-      border-color: $pg-green;
-    }
-
-    input:checked + span {
-      color: #fff;
-      background: $pg-green;
-      border-color: $pg-green;
-    }
-
-    input:focus-visible + span {
-      outline: 3px solid $pg-orange;
-    }
-  }
-
-  .field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-  }
-
-  .field-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .field label,
-  label[for] {
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #555;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-    margin: 0;
-    padding: 14px 16px;
-    font-family: inherit;
-    font-size: 1rem;
-    color: $pg-dark;
-    background: #fff;
-    border: 1.5px solid #cfd6cf;
-    border-radius: 8px;
-    box-sizing: border-box;
-    transition:
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
-
-    &:focus {
-      outline: none;
-      border-color: $pg-green;
-      box-shadow: 0 0 0 3px rgba(2, 121, 1, 0.15);
-    }
-  }
-
-  textarea {
-    min-height: 110px;
-    resize: vertical;
-  }
-
-  .checkout-summary {
-    border-top: 5px solid $pg-orange;
-
-    h3 {
-      margin: 0 0 16px;
-      padding: 0;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1.15rem;
-    }
-
-    ul {
-      margin: 0 0 16px;
-      padding: 0;
-      list-style: none;
-    }
-
-    li {
-      display: flex;
-      justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px solid #e6ebe6;
-      font-size: 0.95rem;
-    }
-
-    .summary-note {
-      margin: 0 0 20px;
-      font-size: 0.85rem;
-      line-height: 1.6;
-      color: #666;
-    }
-
-    button[type="submit"] {
-      width: 100%;
-      padding: 16px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      background: $pg-green;
-      border: 0;
-      border-radius: 10px;
-      cursor: pointer;
-      transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-
-      &:hover {
-        background: darken($pg-green, 8%);
-        transform: translateY(-2px);
-      }
-    }
-
-    .secure {
-      margin: 14px 0 0;
-      text-align: center;
-      font-size: 0.8rem;
-      color: #777;
-    }
-  }
-}
-
-@media (min-width: 860px) {
-  .form-section .checkout-form {
-    grid-template-columns: 1.6fr 1fr;
-  }
-
-  .form-section .checkout-summary {
-    position: sticky;
-    top: 110px;
-  }
+  max-width: 380px;
+  min-width: 0;
+  margin: 0 auto;
 }
 
 @media (min-width: 900px) {
@@ -1123,4 +971,9 @@ body:has(.cpt-single) header {
       transform: translateY(-1px);
     }
   }
+}
+
+// 100vw bands include the scrollbar width; clip the overflow so no horizontal scroll appears
+body:has(.grade-chart-container) {
+  overflow-x: clip;
 }

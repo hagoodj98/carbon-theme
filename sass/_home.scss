@@ -106,7 +106,7 @@ $home-light: #f4f7f4;
     padding-bottom: 20px;
   }
 
-  .stat-number {
+  .page-cards--children .card .stat-number {
     font-size: 3rem;
     font-weight: 700;
     color: $home-green;
@@ -123,7 +123,45 @@ $home-light: #f4f7f4;
 
 // Why Houston
 .why-houston {
+  max-width: none;
+
+  h2,
+  .three-sections,
+  .section-note {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    padding: 30px 20px 0;
+    font-family: $font-headline;
+    text-align: center;
+  }
+
+  .section-note {
+    padding: 0 20px 30px;
+    text-align: center;
+  }
+
   .why-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid $home-green;
+
+    &:nth-child(even) {
+      border-top-color: $home-orange;
+    }
+
+    h3 {
+      padding: 20px 16px 12px;
+    }
+
+    img {
+      flex: 1;
+      min-height: 220px;
+    }
+
     a {
       display: block;
       text-decoration: none;
@@ -162,7 +200,8 @@ $home-light: #f4f7f4;
   .solution-card {
     min-height: 260px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     color: #fff;
     background-size: cover;
     background-position: center;
@@ -180,6 +219,7 @@ $home-light: #f4f7f4;
     }
 
     .card-body {
+      flex: 0 0 auto;
       position: relative;
       padding: 20px;
 
@@ -212,7 +252,7 @@ $home-light: #f4f7f4;
 .explore {
   .exploreOptions {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     padding: 24px 0;
   }
@@ -276,9 +316,6 @@ $home-light: #f4f7f4;
 }
 
 @media (min-width: 650px) {
-  .exploreOptions {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .problem-content {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -289,9 +326,6 @@ $home-light: #f4f7f4;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .explore .exploreOptions {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 // Hero
@@ -430,9 +464,73 @@ header {
   }
 }
 
+header .headerlogo .footerprintsvg {
+  display: block;
+  flex: 0 0 auto;
+  width: 28px;
+  max-width: none;
+  height: auto;
+  padding: 0 10px 0 0;
+  transform: rotate(25deg);
+}
+
+header .hamburger .line {
+  background-color: #fff;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-bar:checked + label .hamburger .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
 @media (max-width: 1023px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  header .headerlogo {
+    font-size: 16px;
+  }
+
   header .navbar {
     border-top: 0;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    border-bottom: 3px solid $home-orange;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      gap: 0;
+    }
+
+    ul li {
+      float: none;
+    }
+
+    ul li a {
+      padding: 18px 20px;
+      font-size: 17px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    ul li a:hover {
+      background: $home-orange;
+      color: #000;
+    }
 
     ul li {
       background: rgba(10, 10, 10, 0.96);

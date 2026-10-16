@@ -17,7 +17,7 @@
         ?>
             <a href="<?php echo site_url() ?>" class="headerlogo">
                 <h1>Houston's Carbon Footprint</h1>
-                <img style="filter: brightness(0) invert(1);" src="<?php echo $imageUrl; ?>" alt="white foot steps" class="footerprintsvg noshowwhitelogo">
+                <img style="filter: brightness(0) invert(1);" src="<?php echo $imageUrl; ?>" alt="white foot steps" class="footerprintsvg ">
             </a>
         <?php
         }

@@ -189,7 +189,7 @@ header .navbar ul li:hover > ul {
   }
 
   #menu-bar:checked ~ .navbar {
-    display: initial;
+    display: block;
   }
   header .navbar ul li a:hover {
     background-color: white;
@@ -728,7 +728,7 @@ footer h4 {
   font-weight: 600;
 }
 .footerprintsvg {
-  max-width: 25px;
+  width: 25px;
 
   transform: rotate(25deg);
   //padding: 16px;

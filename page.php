@@ -68,6 +68,7 @@ while (have_posts()) {
                     ?></section><?php
                                 wp_reset_postdata();
                             }
+                            get_template_part('template-parts/related-sources', null, ['pageId' => $postID]);
                         } else {
 
 

@@ -4,7 +4,4 @@
         echo render_block($args['childPage']['content']);
     }
     ?>
-
-
-
 </section>

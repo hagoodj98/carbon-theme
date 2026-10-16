@@ -46,19 +46,18 @@ footprints.forEach((footprint) => {
   });
 });
 
-function drawChart(footprintValue, averageValue) {
+function drawChart(footprintValue) {
   const ctx = document.getElementById("myChart");
   if (!ctx) return;
 
-  const xValues = ["You", "Average Person"];
-  const yValues = [footprintValue, averageValue]; // Assuming 10 as the average footprint value
-  const barColors = ["#f19d15", "#cccccc"];
+  const yValues = [footprintValue];
+  const youColor = "#f19d15";
+  const trackColor = "#cccccc";
   // Destroy existing chart if it exists before creating a new one
   const existingChart = Chart.getChart("myChart");
   if (existingChart) {
     existingChart.destroy();
   }
-  const [youColor, averageColor] = barColors;
   // The ring is a 0-MAX_FOOTPRINT scale; at or above MAX_FOOTPRINT it is full
   const MAX_FOOTPRINT = 22000;
   // Draws the "You" arc over the gray track, starting at 12 o'clock
@@ -113,7 +112,7 @@ function drawChart(footprintValue, averageValue) {
     "excellent",
   );
   gradeBox.classList.remove("hidden");
-  if (yValues[1] > 35000) {
+  if (yValues[0] > 35000) {
     const getGradeHeader = document.querySelector(
       ".grade-chart-container .grade",
     );
@@ -125,7 +124,7 @@ function drawChart(footprintValue, averageValue) {
       "Your carbon footprint is extremely high.";
 
     document.querySelector(".grade-chart-container").classList.add("horrible");
-  } else if (yValues[1] > 22000) {
+  } else if (yValues[0] > 22000) {
     const getGradeHeader = document.querySelector(
       ".grade-chart-container .grade",
     );
@@ -134,9 +133,9 @@ function drawChart(footprintValue, averageValue) {
       ".grade-chart-container .grade-explanation",
     );
     getGradeExplanation.textContent =
-      "Your carbon footprint is noticeably above average.";
+      "Your carbon footprint is noticeably high.";
     document.querySelector(".grade-chart-container").classList.add("bad");
-  } else if (yValues[1] > 16000) {
+  } else if (yValues[0] > 16000) {
     const getGradeHeader = document.querySelector(
       ".grade-chart-container .grade",
     );
@@ -145,9 +144,9 @@ function drawChart(footprintValue, averageValue) {
       ".grade-chart-container .grade-explanation",
     );
     getGradeExplanation.textContent =
-      "Your carbon footprint is around the average mark.";
+      "Your carbon footprint is in the middle range.";
     document.querySelector(".grade-chart-container").classList.add("meh");
-  } else if (yValues[1] > 10000) {
+  } else if (yValues[0] > 10000) {
     const getGradeHeader = document.querySelector(
       ".grade-chart-container .grade",
     );
@@ -155,9 +154,10 @@ function drawChart(footprintValue, averageValue) {
     const getGradeExplanation = document.querySelector(
       ".grade-chart-container .grade-explanation",
     );
-    getGradeExplanation.textContent = "Your carbon footprint is below average.";
+    getGradeExplanation.textContent =
+      "Your carbon footprint is on the low side.";
     document.querySelector(".grade-chart-container").classList.add("good");
-  } else if (yValues[1] > 5000) {
+  } else if (yValues[0] > 5000) {
     const getGradeHeader = document.querySelector(
       ".grade-chart-container .grade",
     );
@@ -165,8 +165,7 @@ function drawChart(footprintValue, averageValue) {
     const getGradeExplanation = document.querySelector(
       ".grade-chart-container .grade-explanation",
     );
-    getGradeExplanation.textContent =
-      "Your carbon footprint is well below average.";
+    getGradeExplanation.textContent = "Your carbon footprint is very low.";
     document.querySelector(".grade-chart-container").classList.add("great");
   } else {
     const getGradeHeader = document.querySelector(
@@ -179,15 +178,20 @@ function drawChart(footprintValue, averageValue) {
     getGradeExplanation.textContent = "Your carbon footprint is extremely low.";
     document.querySelector(".grade-chart-container").classList.add("excellent");
   }
+  const getStatement = document.querySelector(
+    ".grade-chart-container .fp-statement",
+  );
+  getStatement.textContent =
+    "These results are roughly estimated based on your inputs.";
 
   new Chart(ctx, {
     type: "doughnut",
     data: {
-      labels: xValues,
+      labels: ["Your footprint"],
       datasets: [
         {
           data: [1],
-          backgroundColor: averageColor,
+          backgroundColor: trackColor,
           borderWidth: 0,
         },
       ],
@@ -201,10 +205,10 @@ function drawChart(footprintValue, averageValue) {
           labels: {
             color: "white",
             generateLabels: () =>
-              xValues.map((text, i) => ({
-                text: `${text}: ${Number(yValues[i]).toLocaleString()}`,
-                fillStyle: barColors[i],
-                strokeStyle: barColors[i],
+              [0].map(() => ({
+                text: `Your footprint: ${Number(yValues[0]).toLocaleString()}`,
+                fillStyle: youColor,
+                strokeStyle: youColor,
                 hidden: false,
                 fontColor: "white",
               })),
@@ -235,8 +239,21 @@ document
       method: "POST",
       body: formData,
     });
-
+    if (!response.ok) {
+      const data = await response.json();
+      console.error("Failed to fetch footprint data", data);
+      return;
+    }
     const data = await response.json();
+    if (!data.success) {
+      data.data.forEach((element) => {
+        const fieldError = document.getElementById(`${element.field}-error`);
+        if (fieldError) {
+          fieldError.textContent = element.message;
+        }
+      });
+      return;
+    }
     const existingChart = Chart.getChart("myChart");
     if (existingChart) {
       let ajaxUrl = my_ajax_object.ajax_url;
@@ -257,6 +274,6 @@ document
       document.querySelector(".footprint-form").innerHTML = refreshedContent;
     }
     if (Number.isFinite(Number(data.data.footprint))) {
-      drawChart(Number(data.data.footprint), Number(data.data.average));
+      drawChart(Number(data.data.footprint));
     }
   });

@@ -45,7 +45,6 @@ function get_template_order(int $post_id)
         'intro-section' => 'template-parts/intro-section',
         'card-section' => 'template-parts/card-section',
         'text-image' => 'template-parts/text-image',
-        'related-sources' => 'template-parts/related-sources',
         'connection-section' => 'template-parts/connection-section',
         'video-section' => 'template-parts/video-section',
     ];
